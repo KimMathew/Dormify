@@ -22,39 +22,24 @@ namespace Dormify
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void iconpass_MouseDown(object sender, MouseEventArgs e)
         {
-
+            txtPassword.UseSystemPasswordChar = false;
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void iconpass_MouseUp(object sender, MouseEventArgs e)
         {
-
+            txtPassword.UseSystemPasswordChar = true;
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }
