@@ -29,32 +29,57 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.logolbl = new System.Windows.Forms.Label();
+            this.loginPanel = new System.Windows.Forms.Panel();
+            this.logosublbl = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // logo
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(374, 306);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
+            this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logo.Location = new System.Drawing.Point(5, 30);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(419, 355);
+            this.logo.TabIndex = 2;
+            this.logo.TabStop = false;
             // 
-            // label1
+            // logolbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Royal Acid", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
-            this.label1.Location = new System.Drawing.Point(113, 370);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 47);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Dormify";
+            this.logolbl.AutoSize = true;
+            this.logolbl.BackColor = System.Drawing.Color.Transparent;
+            this.logolbl.Font = new System.Drawing.Font("BodoniXT", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logolbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
+            this.logolbl.Location = new System.Drawing.Point(125, 388);
+            this.logolbl.Name = "logolbl";
+            this.logolbl.Size = new System.Drawing.Size(169, 48);
+            this.logolbl.TabIndex = 2;
+            this.logolbl.Text = "Dormify";
+            this.logolbl.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // loginPanel
+            // 
+            this.loginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
+            this.loginPanel.Location = new System.Drawing.Point(430, -1);
+            this.loginPanel.Name = "loginPanel";
+            this.loginPanel.Size = new System.Drawing.Size(341, 491);
+            this.loginPanel.TabIndex = 3;
+            this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // logosublbl
+            // 
+            this.logosublbl.AutoSize = true;
+            this.logosublbl.BackColor = System.Drawing.Color.Transparent;
+            this.logosublbl.Font = new System.Drawing.Font("BodoniXT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logosublbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
+            this.logosublbl.Location = new System.Drawing.Point(76, 436);
+            this.logosublbl.Name = "logosublbl";
+            this.logosublbl.Size = new System.Drawing.Size(269, 19);
+            this.logosublbl.TabIndex = 4;
+            this.logosublbl.Text = "A Dormitory Management System ";
+            this.logosublbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // LoginForm
             // 
@@ -62,15 +87,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(770, 488);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.logosublbl);
+            this.Controls.Add(this.loginPanel);
+            this.Controls.Add(this.logolbl);
+            this.Controls.Add(this.logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormify";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,8 +105,10 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Label logolbl;
+        private System.Windows.Forms.Panel loginPanel;
+        private System.Windows.Forms.Label logosublbl;
     }
 }
 
