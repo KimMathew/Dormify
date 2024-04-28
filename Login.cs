@@ -41,5 +41,13 @@ namespace Dormify
         {
             Application.Exit();
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            var newform = new RegularForm();
+            newform.Show();
+
+            this.Hide();
+        }
     }
 }

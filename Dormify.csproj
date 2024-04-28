@@ -46,16 +46,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegAnnouncement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegAnnouncement.Designer.cs">
+      <DependentUpon>RegAnnouncement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegAttendance.Designer.cs">
+      <DependentUpon>RegAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegLiabilities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegLiabilities.Designer.cs">
+      <DependentUpon>RegLiabilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegTimeIn_Out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegTimeIn_Out.Designer.cs">
+      <DependentUpon>RegTimeIn_Out.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegularMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegularMain.Designer.cs">
+      <DependentUpon>RegularMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegAnnouncement.resx">
+      <DependentUpon>RegAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegAttendance.resx">
+      <DependentUpon>RegAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegLiabilities.resx">
+      <DependentUpon>RegLiabilities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegTimeIn_Out.resx">
+      <DependentUpon>RegTimeIn_Out.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegularMain.resx">
+      <DependentUpon>RegularMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +110,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +124,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\megaphone %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\profile-user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\attendance1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\back-in-time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\liability %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\liability.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\megaphone %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\time-in1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.logo = new System.Windows.Forms.PictureBox();
             this.logolbl = new System.Windows.Forms.Label();
             this.loginPanel = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconpass = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -45,25 +44,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.logosublbl = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.iconpass = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.loginPanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconpass)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconpass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // logo
-            // 
-            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
-            this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logo.Location = new System.Drawing.Point(5, 30);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(419, 355);
-            this.logo.TabIndex = 2;
-            this.logo.TabStop = false;
             // 
             // logolbl
             // 
@@ -96,6 +86,22 @@
             this.loginPanel.TabIndex = 3;
             this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(187, 398);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(40, 1);
+            this.panel4.TabIndex = 18;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(100, 398);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(40, 1);
+            this.panel3.TabIndex = 17;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -105,19 +111,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(278, 33);
             this.panel2.TabIndex = 16;
-            // 
-            // iconpass
-            // 
-            this.iconpass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("iconpass.BackgroundImage")));
-            this.iconpass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.iconpass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconpass.Location = new System.Drawing.Point(3, 3);
-            this.iconpass.Name = "iconpass";
-            this.iconpass.Size = new System.Drawing.Size(24, 26);
-            this.iconpass.TabIndex = 5;
-            this.iconpass.TabStop = false;
-            this.iconpass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iconpass_MouseDown);
-            this.iconpass.MouseUp += new System.Windows.Forms.MouseEventHandler(this.iconpass_MouseUp);
             // 
             // txtPassword
             // 
@@ -152,16 +145,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(278, 33);
             this.panel1.TabIndex = 14;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 26);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // txtUsername
             // 
@@ -208,6 +191,7 @@
             this.btnSubmit.TabIndex = 12;
             this.btnSubmit.Text = "Login";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // label2
             // 
@@ -258,21 +242,38 @@
             this.logosublbl.TabIndex = 4;
             this.logosublbl.Text = "A Dormitory Management System ";
             // 
-            // panel3
+            // iconpass
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(100, 398);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(40, 1);
-            this.panel3.TabIndex = 17;
+            this.iconpass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("iconpass.BackgroundImage")));
+            this.iconpass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.iconpass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconpass.Location = new System.Drawing.Point(3, 3);
+            this.iconpass.Name = "iconpass";
+            this.iconpass.Size = new System.Drawing.Size(24, 26);
+            this.iconpass.TabIndex = 5;
+            this.iconpass.TabStop = false;
+            this.iconpass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iconpass_MouseDown);
+            this.iconpass.MouseUp += new System.Windows.Forms.MouseEventHandler(this.iconpass_MouseUp);
             // 
-            // panel4
+            // pictureBox1
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(187, 398);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(40, 1);
-            this.panel4.TabIndex = 18;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 26);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // logo
+            // 
+            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
+            this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logo.Location = new System.Drawing.Point(5, 30);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(419, 355);
+            this.logo.TabIndex = 2;
+            this.logo.TabStop = false;
             // 
             // LoginForm
             // 
@@ -289,15 +290,15 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconpass)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconpass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
