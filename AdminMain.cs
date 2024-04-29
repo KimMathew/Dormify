@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Dormify
 {
-    public partial class AdminForm : Form
+    public partial class AdminMain : Form
     {
-        public AdminForm()
+        public AdminMain()
         {
             InitializeComponent();
 

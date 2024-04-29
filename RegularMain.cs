@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Dormify
 {
-    public partial class RegularForm : Form
+    public partial class RegularMain : Form
     {
-        public RegularForm()
+        public RegularMain()
         {
             InitializeComponent();
 

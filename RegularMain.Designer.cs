@@ -1,6 +1,6 @@
 ﻿namespace Dormify
 {
-    partial class RegularForm
+    partial class RegularMain
     {
         /// <summary>
         /// Required designer variable.
@@ -227,7 +227,7 @@
             this.pnlFormLoader.Size = new System.Drawing.Size(765, 477);
             this.pnlFormLoader.TabIndex = 4;
             // 
-            // RegularForm
+            // RegularMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -237,7 +237,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RegularForm";
+            this.Name = "RegularMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormify";
             this.Load += new System.EventHandler(this.RegularForm_Load);

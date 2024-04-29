@@ -41,7 +41,7 @@ namespace Dormify
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            var newform = new AdminForm();
+            var newform = new AdminMain();
             newform.Show();
 
             this.Hide();
