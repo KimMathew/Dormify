@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Dormify
 {
-    public partial class RegTimeIn_Out : Form
+    public partial class RegMain : Form
     {
-        public RegTimeIn_Out()
+        public RegMain()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            var mainForm = new LoginForm();
+            mainForm.Show();
+
+            this.Hide();
         }
     }
 }

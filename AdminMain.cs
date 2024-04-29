@@ -59,7 +59,7 @@ namespace Dormify
         private void btnAttendance_Click(object sender, EventArgs e)
         {
             ChangeNavButton(btnAttendance);
-            RegAttendance frm = new RegAttendance() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            AdminAttendance frm = new AdminAttendance() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             LoadForm("Attendance", frm);
         }
 
