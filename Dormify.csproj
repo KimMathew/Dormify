@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminAnnouncement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAnnouncement.Designer.cs">
+      <DependentUpon>AdminAnnouncement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAttendance.Designer.cs">
+      <DependentUpon>AdminAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLiabilities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLiabilities.Designer.cs">
+      <DependentUpon>AdminLiabilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMain.Designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +108,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminAnnouncement.resx">
+      <DependentUpon>AdminAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAttendance.resx">
+      <DependentUpon>AdminAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLiabilities.resx">
+      <DependentUpon>AdminLiabilities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +193,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\eye %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,19 +22,16 @@ namespace Dormify
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void iconpass_MouseDown(object sender, MouseEventArgs e)
         {
             txtPassword.UseSystemPasswordChar = false;
+            iconpass.Image = Properties.Resources.eye__1_;
         }
 
         private void iconpass_MouseUp(object sender, MouseEventArgs e)
         {
             txtPassword.UseSystemPasswordChar = true;
+            iconpass.Image = Properties.Resources.eye;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -44,7 +41,7 @@ namespace Dormify
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            var newform = new RegularForm();
+            var newform = new AdminForm();
             newform.Show();
 
             this.Hide();

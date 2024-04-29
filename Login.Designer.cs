@@ -34,9 +34,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconpass = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -44,13 +46,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.logosublbl = new System.Windows.Forms.Label();
-            this.iconpass = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
             this.loginPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconpass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +83,6 @@
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(341, 491);
             this.loginPanel.TabIndex = 3;
-            this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel4
             // 
@@ -111,6 +109,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(278, 33);
             this.panel2.TabIndex = 16;
+            // 
+            // iconpass
+            // 
+            this.iconpass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconpass.FlatAppearance.BorderSize = 0;
+            this.iconpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconpass.Image = global::Dormify.Properties.Resources.eye;
+            this.iconpass.Location = new System.Drawing.Point(3, 3);
+            this.iconpass.Name = "iconpass";
+            this.iconpass.Size = new System.Drawing.Size(26, 26);
+            this.iconpass.TabIndex = 10;
+            this.iconpass.UseVisualStyleBackColor = true;
+            this.iconpass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iconpass_MouseDown);
+            this.iconpass.MouseUp += new System.Windows.Forms.MouseEventHandler(this.iconpass_MouseUp);
             // 
             // txtPassword
             // 
@@ -145,6 +157,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(278, 33);
             this.panel1.TabIndex = 14;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 26);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // txtUsername
             // 
@@ -242,32 +264,9 @@
             this.logosublbl.TabIndex = 4;
             this.logosublbl.Text = "A Dormitory Management System ";
             // 
-            // iconpass
-            // 
-            this.iconpass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("iconpass.BackgroundImage")));
-            this.iconpass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.iconpass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconpass.Location = new System.Drawing.Point(3, 3);
-            this.iconpass.Name = "iconpass";
-            this.iconpass.Size = new System.Drawing.Size(24, 26);
-            this.iconpass.TabIndex = 5;
-            this.iconpass.TabStop = false;
-            this.iconpass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iconpass_MouseDown);
-            this.iconpass.MouseUp += new System.Windows.Forms.MouseEventHandler(this.iconpass_MouseUp);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 26);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // logo
             // 
-            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
+            this.logo.BackgroundImage = global::Dormify.Properties.Resources.logo;
             this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logo.Location = new System.Drawing.Point(5, 30);
             this.logo.Name = "logo";
@@ -296,7 +295,6 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconpass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
@@ -319,11 +317,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox iconpass;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button iconpass;
     }
 }
 
