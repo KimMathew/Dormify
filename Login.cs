@@ -16,6 +16,9 @@ namespace Dormify
 {
     public partial class LoginForm : Form
     {
+        public string username;
+        public string password;
+
         public LoginForm()
         {
             InitializeComponent();
@@ -45,6 +48,15 @@ namespace Dormify
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            username = txtUsername.Text;
+            password = txtPassword.Text;
+
+            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Username or Password is empty.");
+                return;
+            }
+
             // Path to your CSV file
             string csvFileName = "UserProfile.csv";
             string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
@@ -52,11 +64,11 @@ namespace Dormify
             if (!File.Exists(csvFilePath))
             {
                 MessageBox.Show("User credentials file does not exist.");
+                return;
             }
 
             // Prompt for username and password
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            
 
             // Read the CSV file
             using (TextFieldParser parser = new TextFieldParser(csvFilePath))
@@ -82,14 +94,14 @@ namespace Dormify
                             var newform = new RegMain();
                             newform.Show();
                         }
+
+                        this.Hide();
+                        return;
                     }
                 }
             }
-
-            // If no match is found
-            Console.WriteLine("Incorrect username or password.");
-
-            this.Hide();
+            MessageBox.Show("Incorrect username or password.");
+            return;
         }
     }
 }
