@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using CsvHelper;
+using System.IO;
+using Microsoft.VisualBasic.FileIO;
 
 namespace Dormify
 {
@@ -41,8 +45,49 @@ namespace Dormify
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            var newform = new AdminMain();
-            newform.Show();
+            // Path to your CSV file
+            string csvFileName = "UserProfile.csv";
+            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
+
+            if (!File.Exists(csvFilePath))
+            {
+                MessageBox.Show("User credentials file does not exist.");
+            }
+
+            // Prompt for username and password
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            // Read the CSV file
+            using (TextFieldParser parser = new TextFieldParser(csvFilePath))
+            {
+                parser.TextFieldType = FieldType.Delimited;
+                parser.SetDelimiters(",");
+
+                // Iterate through each row in the CSV file
+                while (!parser.EndOfData)
+                {
+                    string[] fields = parser.ReadFields();
+
+                    // Check if the username and password match
+                    if (fields.Length >= 2 && fields[3] == username && fields[5] == password)
+                    {
+                        if (fields[7] == "admin")
+                        {
+                            var newform = new AdminMain();
+                            newform.Show();
+                        }
+                        else
+                        {
+                            var newform = new RegMain();
+                            newform.Show();
+                        }
+                    }
+                }
+            }
+
+            // If no match is found
+            Console.WriteLine("Incorrect username or password.");
 
             this.Hide();
         }
