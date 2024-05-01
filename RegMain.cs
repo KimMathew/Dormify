@@ -12,9 +12,16 @@ namespace Dormify
 {
     public partial class RegMain : Form
     {
+        public static RegMain instance;
+        public Label userLabel;
+        public Label userRoom;
+
         public RegMain()
         {
             InitializeComponent();
+            instance = this;
+            userLabel = usernamelbl;
+            userRoom = roomNum;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

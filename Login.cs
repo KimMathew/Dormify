@@ -16,12 +16,15 @@ namespace Dormify
 {
     public partial class LoginForm : Form
     {
-        public string username;
+        public static LoginForm instance;
+        public string fullName;
         public string password;
+        public string roomNumber;
 
         public LoginForm()
         {
             InitializeComponent();
+            instance = this;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -48,60 +51,75 @@ namespace Dormify
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            username = txtUsername.Text;
-            password = txtPassword.Text;
-
-            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            try
+            {
+                if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
                 MessageBox.Show("Username or Password is empty.");
                 return;
             }
 
-            // Path to your CSV file
-            string csvFileName = "UserProfile.csv";
-            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
+                // Path to your CSV file
+                string csvFileName = "UserProfile.csv";
+                string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
 
-            if (!File.Exists(csvFilePath))
-            {
-                MessageBox.Show("User credentials file does not exist.");
-                return;
-            }
+                if (!File.Exists(csvFilePath))
+                {
+                    MessageBox.Show("User credentials file does not exist.");
+                    return;
+                }
 
-            // Prompt for username and password
+                // Prompt for username and password
             
 
-            // Read the CSV file
-            using (TextFieldParser parser = new TextFieldParser(csvFilePath))
-            {
-                parser.TextFieldType = FieldType.Delimited;
-                parser.SetDelimiters(",");
-
-                // Iterate through each row in the CSV file
-                while (!parser.EndOfData)
+                // Read the CSV file
+                using (TextFieldParser parser = new TextFieldParser(csvFilePath))
                 {
-                    string[] fields = parser.ReadFields();
+                    parser.TextFieldType = FieldType.Delimited;
+                    parser.SetDelimiters(",");
 
-                    // Check if the username and password match
-                    if (fields.Length >= 2 && fields[3] == username && fields[5] == password)
+                    // Iterate through each row in the CSV file
+                    while (!parser.EndOfData)
                     {
-                        if (fields[7] == "admin")
-                        {
-                            var newform = new AdminMain();
-                            newform.Show();
-                        }
-                        else
-                        {
-                            var newform = new RegMain();
-                            newform.Show();
-                        }
+                        string[] fields = parser.ReadFields();
 
-                        this.Hide();
-                        return;
+                        // Check if the username and password match
+                        if (fields.Length >= 2 && fields[3] == txtUsername.Text && fields[5] == txtPassword.Text)
+                        {
+
+                            fullName = $"{fields[0]} {fields[1]}";
+                            password = fields[5];
+                            roomNumber = fields[6];
+
+                            if (fields[7] == "admin")
+                            {
+                                var newform = new AdminMain();
+                                newform.Show();
+                            }
+                            else
+                            {
+                                
+                                var newform = new RegMain();
+                                newform.Show();
+                                if (RegMain.instance != null)
+                                {
+                                    RegMain.instance.userLabel.Text = txtUsername.Text;
+                                    RegMain.instance.userRoom.Text = roomNumber;
+                                }
+                            }
+                            //MessageBox.Show($"{fullName} \n {roomNumber}");
+                            this.Hide();
+                            return;
+                        }
                     }
                 }
+                MessageBox.Show("Incorrect username or password.");
+                return;
             }
-            MessageBox.Show("Incorrect username or password.");
-            return;
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
         }
     }
 }
