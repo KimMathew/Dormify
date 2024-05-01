@@ -51,6 +51,10 @@ namespace Dormify
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            
+
+
+
             try
             {
                 if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
@@ -98,14 +102,19 @@ namespace Dormify
                             }
                             else
                             {
-                                
+                                // To use loggedIn user variable in the RegMain form
+                                string loggedIn = txtUsername.Text;
                                 var newform = new RegMain();
+
+                                newform.loggedUsername = loggedIn;
+
                                 newform.Show();
                                 if (RegMain.instance != null)
                                 {
                                     RegMain.instance.userLabel.Text = txtUsername.Text;
                                     RegMain.instance.userRoom.Text = roomNumber;
                                 }
+
                             }
                             //MessageBox.Show($"{fullName} \n {roomNumber}");
                             this.Hide();

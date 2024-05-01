@@ -201,11 +201,13 @@ namespace Dormify
         {
             string idToRemove = removeLiab.Text;
             RemoveLiabilityByAssigneeName(idToRemove);
+            specificLiab.Text = "";
             LoadLiabilitiesFromCsv();
             if (!string.IsNullOrWhiteSpace(specificLiab.Text))
             {
                 LoadLiabilitiesByAssigneeFromCsv(specificLiab.Text);
             }
+            dataGridView2.Rows.Clear();
             ClearTextBoxes();
         }
 
