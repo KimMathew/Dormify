@@ -85,7 +85,7 @@ namespace Dormify
                     }
                     else
                     {
-                        MessageBox.Show("User not found.");
+                        MessageBox.Show("No liabilities found .");
                     }
                 }
             }

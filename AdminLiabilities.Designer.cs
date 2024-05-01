@@ -39,12 +39,19 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.viewSpecified = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.dueDate = new System.Windows.Forms.TextBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.price = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.description = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -55,13 +62,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.description = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.price = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.dueDate = new System.Windows.Forms.TextBox();
-            this.panel10 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel11.SuspendLayout();
@@ -197,6 +197,101 @@
             this.panel11.Size = new System.Drawing.Size(290, 349);
             this.panel11.TabIndex = 38;
             // 
+            // dueDate
+            // 
+            this.dueDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dueDate.Font = new System.Drawing.Font("Poppins", 9F);
+            this.dueDate.Location = new System.Drawing.Point(21, 276);
+            this.dueDate.Name = "dueDate";
+            this.dueDate.Size = new System.Drawing.Size(204, 18);
+            this.dueDate.TabIndex = 35;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Location = new System.Drawing.Point(18, 273);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(207, 24);
+            this.panel10.TabIndex = 36;
+            // 
+            // price
+            // 
+            this.price.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.price.Font = new System.Drawing.Font("Poppins", 9F);
+            this.price.Location = new System.Drawing.Point(22, 230);
+            this.price.Name = "price";
+            this.price.Size = new System.Drawing.Size(204, 18);
+            this.price.TabIndex = 33;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Location = new System.Drawing.Point(19, 227);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(207, 24);
+            this.panel9.TabIndex = 34;
+            // 
+            // description
+            // 
+            this.description.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.description.Font = new System.Drawing.Font("Poppins", 9F);
+            this.description.Location = new System.Drawing.Point(22, 181);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(204, 18);
+            this.description.TabIndex = 31;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(19, 178);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(207, 24);
+            this.panel8.TabIndex = 32;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(14, 252);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 25);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Due Date";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(14, 206);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(103, 25);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Liability Price";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Location = new System.Drawing.Point(7, 43);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(275, 2);
+            this.panel12.TabIndex = 25;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(14, 156);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(148, 25);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Liability Description";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -211,6 +306,14 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Add Liability";
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(19, 129);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(207, 24);
+            this.panel7.TabIndex = 30;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -222,50 +325,6 @@
             this.label9.Size = new System.Drawing.Size(112, 25);
             this.label9.TabIndex = 22;
             this.label9.Text = "Liability Name";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(14, 156);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(148, 25);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Liability Description";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(7, 43);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(275, 2);
-            this.panel12.TabIndex = 25;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(14, 206);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 25);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "Liability Price";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(14, 252);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 25);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "Due Date";
             // 
             // panel1
             // 
@@ -379,65 +438,6 @@
             this.label14.Size = new System.Drawing.Size(210, 47);
             this.label14.TabIndex = 0;
             this.label14.Text = "Remove Liability";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(19, 129);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(207, 24);
-            this.panel7.TabIndex = 30;
-            // 
-            // description
-            // 
-            this.description.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.description.Font = new System.Drawing.Font("Poppins", 9F);
-            this.description.Location = new System.Drawing.Point(22, 181);
-            this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(204, 18);
-            this.description.TabIndex = 31;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(19, 178);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(207, 24);
-            this.panel8.TabIndex = 32;
-            // 
-            // price
-            // 
-            this.price.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.price.Font = new System.Drawing.Font("Poppins", 9F);
-            this.price.Location = new System.Drawing.Point(22, 230);
-            this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(204, 18);
-            this.price.TabIndex = 33;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(19, 227);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(207, 24);
-            this.panel9.TabIndex = 34;
-            // 
-            // dueDate
-            // 
-            this.dueDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dueDate.Font = new System.Drawing.Font("Poppins", 9F);
-            this.dueDate.Location = new System.Drawing.Point(21, 276);
-            this.dueDate.Name = "dueDate";
-            this.dueDate.Size = new System.Drawing.Size(204, 18);
-            this.dueDate.TabIndex = 35;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(18, 273);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(207, 24);
-            this.panel10.TabIndex = 36;
             // 
             // AdminLiabilities
             // 
