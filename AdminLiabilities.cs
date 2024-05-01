@@ -162,6 +162,15 @@ namespace Dormify
             }
         }
 
+        private void ClearTextBoxes()
+        {
+            asignee.Text = "";
+            name.Text = "";
+            description.Text = "";
+            price.Text = "";
+            dueDate.Text = "";
+            removeLiab.Text = "";
+        }
 
 
 
@@ -182,7 +191,7 @@ namespace Dormify
 
         
 
-        private void viewSpecified_Click(object sender, EventArgs e)
+        public  void viewSpecified_Click(object sender, EventArgs e)
         {
             string viewSpecific = specificLiab.Text;
             LoadLiabilitiesByAssigneeFromCsv(viewSpecific);
@@ -193,7 +202,13 @@ namespace Dormify
             string idToRemove = removeLiab.Text;
             RemoveLiabilityByAssigneeName(idToRemove);
             LoadLiabilitiesFromCsv();
+            if (!string.IsNullOrWhiteSpace(specificLiab.Text))
+            {
+                LoadLiabilitiesByAssigneeFromCsv(specificLiab.Text);
+            }
+            ClearTextBoxes();
         }
+
 
         private void submit_Click(object sender, EventArgs e)
         {
@@ -222,6 +237,10 @@ namespace Dormify
             MessageBox.Show("Liability submitted successfully.");
 
             LoadLiabilitiesFromCsv();
+
+            ClearTextBoxes();
+
+
         }
 
     }
