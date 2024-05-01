@@ -36,7 +36,9 @@ namespace Dormify
 
         private void LoadLiabilitiesFromCsv()
         {
-            string csvFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "liabilities.csv");
+            // Path to your CSV file
+            string csvFileName = "liabilities.csv";
+            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
 
             // Check if the file exists
             if (File.Exists(csvFilePath))
@@ -76,7 +78,10 @@ namespace Dormify
 
         private void LoadLiabilitiesByAssigneeFromCsv(string assigneeName)
         {
-            string csvFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "liabilities.csv");
+            // Path to your CSV file
+            string csvFileName = "liabilities.csv";
+            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
+
 
             // Check if the file exists
             if (File.Exists(csvFilePath))
@@ -125,7 +130,9 @@ namespace Dormify
 
         private void RemoveLiabilityByAssigneeName(string id)
         {
-            string csvFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "liabilities.csv");
+            // Path to your CSV file
+            string csvFileName = "liabilities.csv";
+            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
 
             // Check if the file exists
             if (File.Exists(csvFilePath))
@@ -159,7 +166,9 @@ namespace Dormify
 
         private void WriteToCsv(Liability liability)
         {
-            string csvFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "liabilities.csv");
+            // Path to your CSV file
+            string csvFileName = "liabilities.csv";
+            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
 
             using (StreamWriter writer = new StreamWriter(csvFilePath, true))
             using (CsvWriter csvWriter = new CsvWriter(writer, new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)))

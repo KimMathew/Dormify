@@ -121,5 +121,10 @@ namespace Dormify
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
+
+        private void loginPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
