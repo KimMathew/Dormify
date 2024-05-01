@@ -53,7 +53,7 @@ namespace Dormify
         {
             ChangeNavButton(btnLiab);
             AdminLiabilities frm = new AdminLiabilities() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            LoadForm("Add/Remove Liabilities", frm);
+            LoadForm("Liabilities", frm);
         }
 
         private void btnAttendance_Click(object sender, EventArgs e)
