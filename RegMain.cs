@@ -31,5 +31,10 @@ namespace Dormify
 
             this.Hide();
         }
+
+        private void RegMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

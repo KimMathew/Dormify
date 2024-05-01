@@ -30,7 +30,7 @@ namespace Dormify
             public string AssigneeName { get; set; }
             public string Name { get; set; }
             public string Description { get; set; }
-            public decimal Price { get; set; }
+            public string Price { get; set; }
             public string DueDate { get; set; }
         }
 
@@ -67,6 +67,7 @@ namespace Dormify
                     {
                         // Add a new row to DataGridView
                         dataGridView1.Rows.Add(liability.Id, liability.AssigneeName, liability.Name, liability.Description, liability.Price, liability.DueDate);
+
                     }
                 }
             }
@@ -201,15 +202,8 @@ namespace Dormify
             string assigneeName = asignee.Text;
             string userName = name.Text;
             string desc = description.Text;
-            string priceText = price.Text;
+            string liabPrice = price.Text;
             string due = dueDate.Text;
-
-            // Check if the user entered a valid number for the liability price
-            if (!decimal.TryParse(priceText, out decimal liabPrice))
-            {
-                MessageBox.Show("Please enter a valid number for the liability price.");
-                return; // Exit the method if the price is not a valid number
-            }
 
             // Create a Liability object
             Liability liability = new Liability
