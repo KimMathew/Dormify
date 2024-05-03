@@ -14,11 +14,12 @@ using static Dormify.AdminLiabilities;
 namespace Dormify
 {
     public partial class RegMain : Form
-    {
+    { 
         public string loggedUsername { get; set; }
         public static RegMain instance;
         public Label userLabel;
         public Label userRoom;
+        public static List<string> announcementList = new List<string>();
 
 
         public RegMain()
@@ -40,6 +41,7 @@ namespace Dormify
         private void RegMain_Load(object sender, EventArgs e)
         {
             LoadLiabilitiesByAssigneeFromCsv(loggedUsername);
+            LoadAnnouncementsFromFile();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -85,13 +87,55 @@ namespace Dormify
                     }
                     else
                     {
-                        MessageBox.Show("No liabilities found .");
+                        MessageBox.Show("No liabilities found.");
                     }
                 }
             }
             else
             {
                 MessageBox.Show("CSV file not found.");
+            }
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void LoadAnnouncementsFromFile()
+        {
+            
+            string csvFileName = "announcements.csv";
+            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
+
+
+            if (File.Exists(csvFilePath))
+            {
+
+                string[] lines = File.ReadAllLines(csvFilePath);
+                if (lines.Length > 0 && !string.IsNullOrWhiteSpace(lines[0]))
+                {
+                    StringBuilder textFormat = new StringBuilder();
+                   
+                    for(int i = 0; i < lines.Length; i++)
+                    {
+                        textFormat.AppendFormat("{0}. {1}\n\n",i+1, lines[i]);
+                        showTextBox.Text = textFormat.ToString();
+                    }
+                    
+                }
+                else
+                {
+                    showTextBox.Text = "No announcement at the moment.";
+                }
+            }
+            else
+            {
+                showTextBox.Text = "No announcement at the moment.";
+            }
+
+            if (File.Exists("announcements.csv"))
+            {
+               announcementList = File.ReadAllLines("announcements.csv").ToList();
             }
         }
     }
