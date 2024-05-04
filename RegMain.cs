@@ -60,6 +60,8 @@ namespace Dormify
         {
             LoadLiabilitiesByAssigneeFromCsv(loggedUsername);
             LoadAnnouncementsFromFile();
+
+
         }
 
         private void LoadLiabilitiesByAssigneeFromCsv(string assigneeName)
@@ -141,20 +143,29 @@ namespace Dormify
                 showTextBox.Text = "No announcement at the moment.";
             }
 
-            if (File.Exists("announcements.csv"))
+            if (File.Exists(csvFileName))
             {
-               announcementList = File.ReadAllLines("announcements.csv").ToList();
+               announcementList = File.ReadAllLines(csvFileName).ToList();
             }
         }
 
         private void btnRegMessages_Click(object sender, EventArgs e)
         {
-            ShowFormWithBackground(new RegMessages());
+            var newForm = new RegMessages();
+            newForm.loggedUsername = loggedUsername;
+            ShowFormWithBackground(newForm);
+  
+
         }
 
         private void btnGuests_Click(object sender, EventArgs e)
         {
             ShowFormWithBackground(new RegGuests());
+        }
+
+        private void usernamelbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

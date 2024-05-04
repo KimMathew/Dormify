@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +14,7 @@ namespace Dormify
 {
     public partial class RegMessages : Form
     {
-
+        public string loggedUsername { get; set; }
         private static string csvFileName = "message.csv";
         private static string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
 
@@ -21,7 +22,7 @@ namespace Dormify
         public RegMessages()
         {
             InitializeComponent();
-            
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -36,9 +37,12 @@ namespace Dormify
             {
                 if (!messageList.Contains(message))
                 {
+                    var newForm = new AdminMessages();
+                    newForm.loggedUsername = loggedUsername;
                     messageList.Add(message);
                     SaveMessagesToFile();
                     MessageBox.Show("Message sent!");
+                    messageList.Clear();
                 }
                 else
                 {

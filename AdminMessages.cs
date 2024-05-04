@@ -13,6 +13,7 @@ namespace Dormify
 {
     public partial class AdminMessages : Form
     {
+        public string loggedUsername {get; set;}
         private static List<string> messageList = new List<string>();
         public AdminMessages()
         {
@@ -27,7 +28,6 @@ namespace Dormify
 
             if (File.Exists(csvFilePath))
             {
-
                 string[] lines = File.ReadAllLines(csvFilePath);
                 if (lines.Length > 0 && !string.IsNullOrWhiteSpace(lines[0]))
                 {
@@ -43,15 +43,15 @@ namespace Dormify
                 {
                     showMessages.Text = "No messages at the moment.";
                 }
+
             }
             else
             {
                 showMessages.Text = "No messages at the moment.";
             }
-
-            if (File.Exists("message.csv"))
+            if (File.Exists(csvFileName))
             {
-                messageList = File.ReadAllLines("message.csv").ToList();
+                messageList = File.ReadAllLines(csvFileName).ToList();
             }
         }
 
