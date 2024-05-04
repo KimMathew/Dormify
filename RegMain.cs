@@ -30,7 +30,7 @@ namespace Dormify
             userRoom = roomNum;
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void btnLogOut_Click(object sender, EventArgs e)
         {
             var mainForm = new LoginForm();
             mainForm.Show();
@@ -96,11 +96,6 @@ namespace Dormify
                 MessageBox.Show("CSV file not found.");
             }
         }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void LoadAnnouncementsFromFile()
         {
             
@@ -137,6 +132,18 @@ namespace Dormify
             {
                announcementList = File.ReadAllLines("announcements.csv").ToList();
             }
+        }
+
+        private void btnRegMessages_Click(object sender, EventArgs e)
+        {
+            var frmMessages = new RegMessages();
+            frmMessages.Show();
+        }
+
+        private void btnGuests_Click(object sender, EventArgs e)
+        {
+            var frmGuests = new RegGuests();
+            frmGuests.Show();
         }
     }
 }
