@@ -32,10 +32,8 @@
             this.asignee = new System.Windows.Forms.ComboBox();
             this.name = new System.Windows.Forms.TextBox();
             this.submit = new System.Windows.Forms.Button();
-            this.removeLiab = new System.Windows.Forms.TextBox();
             this.btn2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.specificLiab = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.viewSpecified = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -62,6 +60,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
+            this.specificLiab = new System.Windows.Forms.TextBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.removeLiab = new System.Windows.Forms.TextBox();
+            this.panel14 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel11.SuspendLayout();
@@ -109,53 +111,51 @@
             // submit
             // 
             this.submit.AutoSize = true;
-            this.submit.BackColor = System.Drawing.Color.Transparent;
+            this.submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(99)))), ((int)(((byte)(108)))));
+            this.submit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.submit.FlatAppearance.BorderSize = 0;
             this.submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submit.Font = new System.Drawing.Font("Poppins Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submit.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submit.ForeColor = System.Drawing.Color.White;
-            this.submit.Location = new System.Drawing.Point(102, 304);
+            this.submit.Location = new System.Drawing.Point(102, 305);
             this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(85, 38);
+            this.submit.Size = new System.Drawing.Size(85, 36);
             this.submit.TabIndex = 29;
             this.submit.Text = "Submit";
             this.submit.UseVisualStyleBackColor = false;
             this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
-            // removeLiab
-            // 
-            this.removeLiab.Location = new System.Drawing.Point(67, 63);
-            this.removeLiab.Name = "removeLiab";
-            this.removeLiab.Size = new System.Drawing.Size(158, 20);
-            this.removeLiab.TabIndex = 31;
-            // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(7, 61);
+            this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(99)))), ((int)(((byte)(108)))));
+            this.btn2.FlatAppearance.BorderSize = 0;
+            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2.ForeColor = System.Drawing.Color.White;
+            this.btn2.Location = new System.Drawing.Point(7, 60);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(54, 24);
+            this.btn2.Size = new System.Drawing.Size(66, 28);
             this.btn2.TabIndex = 32;
-            this.btn2.Text = "remove";
-            this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Text = "Remove";
+            this.btn2.UseVisualStyleBackColor = false;
             this.btn2.Click += new System.EventHandler(this.remove_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(7, 52);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(423, 177);
+            this.dataGridView1.Size = new System.Drawing.Size(422, 177);
             this.dataGridView1.TabIndex = 33;
-            // 
-            // specificLiab
-            // 
-            this.specificLiab.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.specificLiab.Location = new System.Drawing.Point(63, 54);
-            this.specificLiab.Name = "specificLiab";
-            this.specificLiab.Size = new System.Drawing.Size(177, 25);
-            this.specificLiab.TabIndex = 35;
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(7, 84);
             this.dataGridView2.Name = "dataGridView2";
@@ -164,12 +164,17 @@
             // 
             // viewSpecified
             // 
-            this.viewSpecified.Location = new System.Drawing.Point(8, 51);
+            this.viewSpecified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(99)))), ((int)(((byte)(108)))));
+            this.viewSpecified.FlatAppearance.BorderSize = 0;
+            this.viewSpecified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewSpecified.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewSpecified.ForeColor = System.Drawing.Color.White;
+            this.viewSpecified.Location = new System.Drawing.Point(8, 52);
             this.viewSpecified.Name = "viewSpecified";
-            this.viewSpecified.Size = new System.Drawing.Size(50, 30);
+            this.viewSpecified.Size = new System.Drawing.Size(47, 28);
             this.viewSpecified.TabIndex = 37;
-            this.viewSpecified.Text = "view";
-            this.viewSpecified.UseVisualStyleBackColor = true;
+            this.viewSpecified.Text = "View";
+            this.viewSpecified.UseVisualStyleBackColor = false;
             this.viewSpecified.Click += new System.EventHandler(this.viewSpecified_Click);
             // 
             // panel11
@@ -362,10 +367,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
+            this.panel3.Controls.Add(this.specificLiab);
+            this.panel3.Controls.Add(this.panel13);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.viewSpecified);
-            this.panel3.Controls.Add(this.specificLiab);
             this.panel3.Controls.Add(this.dataGridView2);
             this.panel3.Location = new System.Drawing.Point(316, 253);
             this.panel3.Name = "panel3";
@@ -397,9 +403,10 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
+            this.panel5.Controls.Add(this.removeLiab);
+            this.panel5.Controls.Add(this.panel14);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.removeLiab);
             this.panel5.Controls.Add(this.btn2);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Location = new System.Drawing.Point(11, 365);
@@ -439,6 +446,40 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Remove Liability";
             // 
+            // specificLiab
+            // 
+            this.specificLiab.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.specificLiab.Font = new System.Drawing.Font("Poppins", 9F);
+            this.specificLiab.Location = new System.Drawing.Point(64, 57);
+            this.specificLiab.Name = "specificLiab";
+            this.specificLiab.Size = new System.Drawing.Size(204, 18);
+            this.specificLiab.TabIndex = 37;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Location = new System.Drawing.Point(61, 54);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(207, 24);
+            this.panel13.TabIndex = 38;
+            // 
+            // removeLiab
+            // 
+            this.removeLiab.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.removeLiab.Font = new System.Drawing.Font("Poppins", 9F);
+            this.removeLiab.Location = new System.Drawing.Point(81, 65);
+            this.removeLiab.Name = "removeLiab";
+            this.removeLiab.Size = new System.Drawing.Size(186, 18);
+            this.removeLiab.TabIndex = 37;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Location = new System.Drawing.Point(78, 62);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(189, 24);
+            this.panel14.TabIndex = 38;
+            // 
             // AdminLiabilities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,10 +514,8 @@
         private System.Windows.Forms.ComboBox asignee;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Button submit;
-        private System.Windows.Forms.TextBox removeLiab;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox specificLiab;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button viewSpecified;
         private System.Windows.Forms.Panel panel11;
@@ -503,5 +542,9 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox description;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox specificLiab;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.TextBox removeLiab;
+        private System.Windows.Forms.Panel panel14;
     }
 }

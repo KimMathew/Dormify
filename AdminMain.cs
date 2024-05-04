@@ -18,7 +18,7 @@ namespace Dormify
 
             ChangeNavButton(btnAnnouncement);
             AdminAnnouncement frm = new AdminAnnouncement() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            LoadForm("Add/Remove Announcement", frm);
+            LoadForm("Announcements", frm);
         }
 
         private void LoadForm(string title, Form form)
@@ -46,7 +46,7 @@ namespace Dormify
         {
             ChangeNavButton(btnAnnouncement);
             AdminAnnouncement frm = new AdminAnnouncement() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            LoadForm("Add/Remove Announcement", frm);
+            LoadForm("Announcements", frm);
         }
 
         private void btnLiab_Click(object sender, EventArgs e)
