@@ -77,7 +77,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 50);
+            this.label2.Location = new System.Drawing.Point(13, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 25);
             this.label2.TabIndex = 13;
@@ -94,7 +94,7 @@
             "adrian",
             "kim",
             "gian"});
-            this.asignee.Location = new System.Drawing.Point(18, 73);
+            this.asignee.Location = new System.Drawing.Point(18, 76);
             this.asignee.Name = "asignee";
             this.asignee.Size = new System.Drawing.Size(208, 30);
             this.asignee.TabIndex = 20;
@@ -103,7 +103,7 @@
             // 
             this.name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.name.Font = new System.Drawing.Font("Poppins", 9F);
-            this.name.Location = new System.Drawing.Point(22, 132);
+            this.name.Location = new System.Drawing.Point(22, 135);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(204, 18);
             this.name.TabIndex = 21;
@@ -117,7 +117,7 @@
             this.submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submit.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submit.ForeColor = System.Drawing.Color.White;
-            this.submit.Location = new System.Drawing.Point(102, 305);
+            this.submit.Location = new System.Drawing.Point(102, 308);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(85, 36);
             this.submit.TabIndex = 29;
@@ -146,9 +146,9 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 52);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 55);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(422, 177);
+            this.dataGridView1.Size = new System.Drawing.Size(422, 174);
             this.dataGridView1.TabIndex = 33;
             // 
             // dataGridView2
@@ -157,9 +157,9 @@
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(7, 84);
+            this.dataGridView2.Location = new System.Drawing.Point(7, 98);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(422, 121);
+            this.dataGridView2.Size = new System.Drawing.Size(422, 107);
             this.dataGridView2.TabIndex = 36;
             // 
             // viewSpecified
@@ -169,7 +169,7 @@
             this.viewSpecified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewSpecified.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewSpecified.ForeColor = System.Drawing.Color.White;
-            this.viewSpecified.Location = new System.Drawing.Point(8, 52);
+            this.viewSpecified.Location = new System.Drawing.Point(8, 59);
             this.viewSpecified.Name = "viewSpecified";
             this.viewSpecified.Size = new System.Drawing.Size(47, 28);
             this.viewSpecified.TabIndex = 37;
@@ -199,14 +199,14 @@
             this.panel11.Controls.Add(this.label9);
             this.panel11.Location = new System.Drawing.Point(11, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(290, 349);
+            this.panel11.Size = new System.Drawing.Size(290, 352);
             this.panel11.TabIndex = 38;
             // 
             // dueDate
             // 
             this.dueDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dueDate.Font = new System.Drawing.Font("Poppins", 9F);
-            this.dueDate.Location = new System.Drawing.Point(21, 276);
+            this.dueDate.Location = new System.Drawing.Point(21, 279);
             this.dueDate.Name = "dueDate";
             this.dueDate.Size = new System.Drawing.Size(204, 18);
             this.dueDate.TabIndex = 35;
@@ -214,7 +214,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(18, 273);
+            this.panel10.Location = new System.Drawing.Point(18, 276);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(207, 24);
             this.panel10.TabIndex = 36;
@@ -223,7 +223,7 @@
             // 
             this.price.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.price.Font = new System.Drawing.Font("Poppins", 9F);
-            this.price.Location = new System.Drawing.Point(22, 230);
+            this.price.Location = new System.Drawing.Point(22, 233);
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(204, 18);
             this.price.TabIndex = 33;
@@ -231,7 +231,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(19, 227);
+            this.panel9.Location = new System.Drawing.Point(19, 230);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(207, 24);
             this.panel9.TabIndex = 34;
@@ -240,7 +240,7 @@
             // 
             this.description.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.description.Font = new System.Drawing.Font("Poppins", 9F);
-            this.description.Location = new System.Drawing.Point(22, 181);
+            this.description.Location = new System.Drawing.Point(22, 184);
             this.description.Name = "description";
             this.description.Size = new System.Drawing.Size(204, 18);
             this.description.TabIndex = 31;
@@ -248,7 +248,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(19, 178);
+            this.panel8.Location = new System.Drawing.Point(19, 181);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(207, 24);
             this.panel8.TabIndex = 32;
@@ -259,7 +259,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(14, 252);
+            this.label12.Location = new System.Drawing.Point(14, 255);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(77, 25);
             this.label12.TabIndex = 29;
@@ -271,7 +271,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(14, 206);
+            this.label11.Location = new System.Drawing.Point(14, 209);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(103, 25);
             this.label11.TabIndex = 27;
@@ -280,9 +280,10 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(7, 43);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 47);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(275, 2);
+            this.panel12.Size = new System.Drawing.Size(290, 2);
             this.panel12.TabIndex = 25;
             // 
             // label10
@@ -291,7 +292,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(14, 156);
+            this.label10.Location = new System.Drawing.Point(14, 159);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(148, 25);
             this.label10.TabIndex = 24;
@@ -314,7 +315,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(19, 129);
+            this.panel7.Location = new System.Drawing.Point(19, 132);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(207, 24);
             this.panel7.TabIndex = 30;
@@ -325,7 +326,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(14, 107);
+            this.label9.Location = new System.Drawing.Point(14, 110);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(112, 25);
             this.label9.TabIndex = 22;
@@ -345,9 +346,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(7, 43);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 47);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(422, 2);
+            this.panel2.Size = new System.Drawing.Size(436, 2);
             this.panel2.TabIndex = 25;
             // 
             // label13
@@ -382,7 +384,7 @@
             // 
             this.specificLiab.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.specificLiab.Font = new System.Drawing.Font("Poppins", 9F);
-            this.specificLiab.Location = new System.Drawing.Point(64, 57);
+            this.specificLiab.Location = new System.Drawing.Point(64, 64);
             this.specificLiab.Name = "specificLiab";
             this.specificLiab.Size = new System.Drawing.Size(204, 18);
             this.specificLiab.TabIndex = 37;
@@ -390,7 +392,7 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(61, 54);
+            this.panel13.Location = new System.Drawing.Point(61, 61);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(207, 24);
             this.panel13.TabIndex = 38;
@@ -398,9 +400,10 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(7, 43);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 47);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(422, 2);
+            this.panel4.Size = new System.Drawing.Size(436, 2);
             this.panel4.TabIndex = 25;
             // 
             // label1
@@ -426,9 +429,9 @@
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.btn2);
             this.panel5.Controls.Add(this.label14);
-            this.panel5.Location = new System.Drawing.Point(11, 365);
+            this.panel5.Location = new System.Drawing.Point(11, 367);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(290, 100);
+            this.panel5.Size = new System.Drawing.Size(290, 98);
             this.panel5.TabIndex = 39;
             // 
             // removeLiab
@@ -451,9 +454,10 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(7, 43);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 47);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(275, 2);
+            this.panel6.Size = new System.Drawing.Size(290, 2);
             this.panel6.TabIndex = 25;
             // 
             // button1
