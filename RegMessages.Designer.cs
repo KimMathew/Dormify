@@ -30,6 +30,8 @@
         {
             this.lblMessages = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.messageTextBox = new System.Windows.Forms.TextBox();
+            this.btnMessageSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblMessages
@@ -39,9 +41,10 @@
             this.lblMessages.Font = new System.Drawing.Font("Poppins", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessages.ForeColor = System.Drawing.Color.White;
             this.lblMessages.Location = new System.Drawing.Point(0, 0);
+            this.lblMessages.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessages.Name = "lblMessages";
-            this.lblMessages.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.lblMessages.Size = new System.Drawing.Size(170, 58);
+            this.lblMessages.Padding = new System.Windows.Forms.Padding(13, 12, 0, 0);
+            this.lblMessages.Size = new System.Drawing.Size(214, 72);
             this.lblMessages.TabIndex = 5;
             this.lblMessages.Text = "Messages";
             // 
@@ -51,25 +54,48 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = global::Dormify.Properties.Resources.exit;
-            this.btnExit.Location = new System.Drawing.Point(608, 12);
+            this.btnExit.Location = new System.Drawing.Point(811, 15);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(30, 33);
+            this.btnExit.Size = new System.Drawing.Size(40, 41);
             this.btnExit.TabIndex = 25;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // messageTextBox
+            // 
+            this.messageTextBox.Location = new System.Drawing.Point(213, 155);
+            this.messageTextBox.Multiline = true;
+            this.messageTextBox.Name = "messageTextBox";
+            this.messageTextBox.Size = new System.Drawing.Size(417, 62);
+            this.messageTextBox.TabIndex = 26;
+            // 
+            // btnMessageSubmit
+            // 
+            this.btnMessageSubmit.Location = new System.Drawing.Point(381, 223);
+            this.btnMessageSubmit.Name = "btnMessageSubmit";
+            this.btnMessageSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnMessageSubmit.TabIndex = 27;
+            this.btnMessageSubmit.Text = "Submit";
+            this.btnMessageSubmit.UseVisualStyleBackColor = true;
+            this.btnMessageSubmit.Click += new System.EventHandler(this.btnMessageSubmit_Click);
+            // 
             // RegMessages
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(134)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(650, 400);
+            this.ClientSize = new System.Drawing.Size(867, 492);
+            this.Controls.Add(this.btnMessageSubmit);
+            this.Controls.Add(this.messageTextBox);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblMessages);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegMessages";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegMessages";
+            this.Load += new System.EventHandler(this.RegMessages_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,5 +105,7 @@
 
         private System.Windows.Forms.Label lblMessages;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox messageTextBox;
+        private System.Windows.Forms.Button btnMessageSubmit;
     }
 }

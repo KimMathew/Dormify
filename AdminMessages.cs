@@ -55,5 +55,14 @@ namespace Dormify
             }
         }
 
+        private void showMessages_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminMessages_Load(object sender, EventArgs e)
+        {
+            LoadMessagesFromFile();
+        }
     }
 }

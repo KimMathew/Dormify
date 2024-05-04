@@ -39,6 +39,7 @@
             this.showMessages.Size = new System.Drawing.Size(44, 16);
             this.showMessages.TabIndex = 0;
             this.showMessages.Text = "label1";
+            this.showMessages.Click += new System.EventHandler(this.showMessages_Click);
             // 
             // AdminMessages
             // 
@@ -48,9 +49,10 @@
             this.ClientSize = new System.Drawing.Size(1020, 587);
             this.Controls.Add(this.showMessages);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminMessages";
             this.Text = "AdminMessages";
+            this.Load += new System.EventHandler(this.AdminMessages_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
