@@ -30,12 +30,30 @@ namespace Dormify
             userRoom = roomNum;
         }
 
+        private void ShowFormWithBackground<T>(T form) where T : Form, new()
+        {
+            this.ActiveControl = null;
+            using (Form frmBackground = new Form())
+            {
+                frmBackground.StartPosition = FormStartPosition.Manual;
+                frmBackground.FormBorderStyle = FormBorderStyle.None;
+                frmBackground.Opacity = 0.5d;
+                frmBackground.BackColor = Color.Black;
+                frmBackground.Size = this.Size;
+                frmBackground.Location = this.Location;
+                frmBackground.ShowInTaskbar = false;
+                frmBackground.Show();
+                form.Owner = frmBackground;
+                form.ShowDialog();
+            }
+        }
+
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             var mainForm = new LoginForm();
             mainForm.Show();
 
-            this.Hide();
+            this.Close();
         }
 
         private void RegMain_Load(object sender, EventArgs e)
@@ -131,16 +149,12 @@ namespace Dormify
 
         private void btnRegMessages_Click(object sender, EventArgs e)
         {
-            var frmMessages = new RegMessages();
-            frmMessages.Show();
-            this.ActiveControl = null;
+            ShowFormWithBackground(new RegMessages());
         }
 
         private void btnGuests_Click(object sender, EventArgs e)
         {
-            var frmGuests = new RegGuests();
-            frmGuests.Show();
-            this.ActiveControl = null;
+            ShowFormWithBackground(new RegGuests());
         }
     }
 }
