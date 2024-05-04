@@ -14,6 +14,8 @@ namespace Dormify
 {
     public partial class AdminAnnouncement : Form
     {
+        private static string csvFileName = "announcements.csv";
+        private static string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
         private static List<string> announcementList = new List<string>();
         public AdminAnnouncement()
         {
@@ -46,8 +48,7 @@ namespace Dormify
         }
         private void LoadAnnouncementsFromFile()
         {
-            string csvFileName = "announcements.csv";
-            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
+
 
             if (File.Exists(csvFilePath))
             {
@@ -73,14 +74,14 @@ namespace Dormify
                 showTextBox.Text = "No announcement at the moment.";
             }
 
-            if (File.Exists("announcements.csv"))
+            if (File.Exists(csvFileName))
             {
-                announcementList = File.ReadAllLines("announcements.csv").ToList();
+                announcementList = File.ReadAllLines(csvFileName).ToList();
             }
         }
         private void SaveAnnouncementsToFile()
         {
-            File.WriteAllLines("announcements.csv", announcementList);
+            File.WriteAllLines(csvFileName, announcementList);
         }
 
         private void AdminAnnouncement_Load(object sender, EventArgs e)
