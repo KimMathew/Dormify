@@ -30,16 +30,17 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.roomNum = new System.Windows.Forms.Label();
+            this.usernamelbl = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.pnlFormLoader = new System.Windows.Forms.Panel();
+            this.btnMessages = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnAttendance = new System.Windows.Forms.Button();
             this.btnLiab = new System.Windows.Forms.Button();
             this.btnAnnouncement = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.roomNum = new System.Windows.Forms.Label();
-            this.usernamelbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.pnlFormLoader = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,6 +50,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
             this.panel2.Controls.Add(this.pnlNav);
+            this.panel2.Controls.Add(this.btnMessages);
             this.panel2.Controls.Add(this.btnLogOut);
             this.panel2.Controls.Add(this.btnAttendance);
             this.panel2.Controls.Add(this.btnLiab);
@@ -67,6 +69,77 @@
             this.pnlNav.Name = "pnlNav";
             this.pnlNav.Size = new System.Drawing.Size(4, 100);
             this.pnlNav.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.roomNum);
+            this.panel1.Controls.Add(this.usernamelbl);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(186, 157);
+            this.panel1.TabIndex = 3;
+            // 
+            // roomNum
+            // 
+            this.roomNum.AutoSize = true;
+            this.roomNum.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomNum.ForeColor = System.Drawing.Color.White;
+            this.roomNum.Location = new System.Drawing.Point(40, 123);
+            this.roomNum.Name = "roomNum";
+            this.roomNum.Size = new System.Drawing.Size(103, 19);
+            this.roomNum.TabIndex = 3;
+            this.roomNum.Text = "Info About Admin";
+            // 
+            // usernamelbl
+            // 
+            this.usernamelbl.AutoSize = true;
+            this.usernamelbl.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernamelbl.ForeColor = System.Drawing.Color.White;
+            this.usernamelbl.Location = new System.Drawing.Point(61, 97);
+            this.usernamelbl.Name = "usernamelbl";
+            this.usernamelbl.Size = new System.Drawing.Size(63, 26);
+            this.usernamelbl.TabIndex = 3;
+            this.usernamelbl.Text = "Admin";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Poppins", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(96)))), ((int)(((byte)(197)))));
+            this.lblTitle.Location = new System.Drawing.Point(192, 29);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(112, 56);
+            this.lblTitle.TabIndex = 4;
+            this.lblTitle.Text = "Label";
+            // 
+            // pnlFormLoader
+            // 
+            this.pnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlFormLoader.Location = new System.Drawing.Point(186, 100);
+            this.pnlFormLoader.Name = "pnlFormLoader";
+            this.pnlFormLoader.Size = new System.Drawing.Size(765, 477);
+            this.pnlFormLoader.TabIndex = 5;
+            // 
+            // btnMessages
+            // 
+            this.btnMessages.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMessages.FlatAppearance.BorderSize = 0;
+            this.btnMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMessages.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMessages.ForeColor = System.Drawing.Color.White;
+            this.btnMessages.Image = global::Dormify.Properties.Resources.mail__1_;
+            this.btnMessages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMessages.Location = new System.Drawing.Point(0, 295);
+            this.btnMessages.Name = "btnMessages";
+            this.btnMessages.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMessages.Size = new System.Drawing.Size(186, 46);
+            this.btnMessages.TabIndex = 6;
+            this.btnMessages.Text = "  Messages";
+            this.btnMessages.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMessages.UseVisualStyleBackColor = true;
+            this.btnMessages.Click += new System.EventHandler(this.btnMessages_Click);
             // 
             // btnLogOut
             // 
@@ -145,39 +218,6 @@
             this.btnAnnouncement.UseVisualStyleBackColor = true;
             this.btnAnnouncement.Click += new System.EventHandler(this.btnAnnouncement_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.roomNum);
-            this.panel1.Controls.Add(this.usernamelbl);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 157);
-            this.panel1.TabIndex = 3;
-            // 
-            // roomNum
-            // 
-            this.roomNum.AutoSize = true;
-            this.roomNum.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomNum.ForeColor = System.Drawing.Color.White;
-            this.roomNum.Location = new System.Drawing.Point(40, 123);
-            this.roomNum.Name = "roomNum";
-            this.roomNum.Size = new System.Drawing.Size(103, 19);
-            this.roomNum.TabIndex = 3;
-            this.roomNum.Text = "Info About Admin";
-            // 
-            // usernamelbl
-            // 
-            this.usernamelbl.AutoSize = true;
-            this.usernamelbl.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernamelbl.ForeColor = System.Drawing.Color.White;
-            this.usernamelbl.Location = new System.Drawing.Point(61, 97);
-            this.usernamelbl.Name = "usernamelbl";
-            this.usernamelbl.Size = new System.Drawing.Size(63, 26);
-            this.usernamelbl.TabIndex = 3;
-            this.usernamelbl.Text = "Admin";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Dormify.Properties.Resources.profile_user__1_;
@@ -187,25 +227,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Poppins", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(96)))), ((int)(((byte)(197)))));
-            this.lblTitle.Location = new System.Drawing.Point(192, 29);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(112, 56);
-            this.lblTitle.TabIndex = 4;
-            this.lblTitle.Text = "Label";
-            // 
-            // pnlFormLoader
-            // 
-            this.pnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFormLoader.Location = new System.Drawing.Point(186, 100);
-            this.pnlFormLoader.Name = "pnlFormLoader";
-            this.pnlFormLoader.Size = new System.Drawing.Size(765, 477);
-            this.pnlFormLoader.TabIndex = 5;
             // 
             // AdminMain
             // 
@@ -244,5 +265,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel pnlFormLoader;
+        private System.Windows.Forms.Button btnMessages;
     }
 }

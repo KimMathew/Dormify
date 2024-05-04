@@ -63,12 +63,19 @@ namespace Dormify
             LoadForm("Attendance", frm);
         }
 
+        private void btnMessages_Click(object sender, EventArgs e)
+        {
+            ChangeNavButton(btnMessages);
+            AdminMessages frm = new AdminMessages() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            LoadForm("Messages", frm);
+        }
+
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             var mainForm = new LoginForm();
             mainForm.Show();
 
             this.Hide();
-        }
+        } 
     }
 }
