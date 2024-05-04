@@ -14,7 +14,7 @@ namespace Dormify
 {
     public partial class AdminAnnouncement : Form
     {
-        public static List<string> announcementList = new List<string>();
+        private static List<string> announcementList = new List<string>();
         public AdminAnnouncement()
         {
             InitializeComponent();
