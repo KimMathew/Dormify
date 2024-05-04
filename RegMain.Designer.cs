@@ -159,12 +159,16 @@
             // 
             // showTextBox
             // 
-            this.showTextBox.Location = new System.Drawing.Point(10, 3);
+            this.showTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(254)))));
+            this.showTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.showTextBox.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showTextBox.ForeColor = System.Drawing.Color.Black;
+            this.showTextBox.Location = new System.Drawing.Point(15, 3);
             this.showTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.showTextBox.Name = "showTextBox";
             this.showTextBox.ReadOnly = true;
-            this.showTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth;
-            this.showTextBox.Size = new System.Drawing.Size(365, 186);
+            this.showTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.showTextBox.Size = new System.Drawing.Size(356, 186);
             this.showTextBox.TabIndex = 0;
             this.showTextBox.Text = "";
             // 

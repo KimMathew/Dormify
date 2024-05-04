@@ -54,16 +54,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.specificLiab = new System.Windows.Forms.TextBox();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.removeLiab = new System.Windows.Forms.TextBox();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.specificLiab = new System.Windows.Forms.TextBox();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.removeLiab = new System.Windows.Forms.TextBox();
-            this.panel14 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel11.SuspendLayout();
@@ -378,6 +378,23 @@
             this.panel3.Size = new System.Drawing.Size(436, 212);
             this.panel3.TabIndex = 40;
             // 
+            // specificLiab
+            // 
+            this.specificLiab.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.specificLiab.Font = new System.Drawing.Font("Poppins", 9F);
+            this.specificLiab.Location = new System.Drawing.Point(64, 57);
+            this.specificLiab.Name = "specificLiab";
+            this.specificLiab.Size = new System.Drawing.Size(204, 18);
+            this.specificLiab.TabIndex = 37;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Location = new System.Drawing.Point(61, 54);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(207, 24);
+            this.panel13.TabIndex = 38;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
@@ -414,6 +431,23 @@
             this.panel5.Size = new System.Drawing.Size(290, 100);
             this.panel5.TabIndex = 39;
             // 
+            // removeLiab
+            // 
+            this.removeLiab.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.removeLiab.Font = new System.Drawing.Font("Poppins", 9F);
+            this.removeLiab.Location = new System.Drawing.Point(81, 65);
+            this.removeLiab.Name = "removeLiab";
+            this.removeLiab.Size = new System.Drawing.Size(186, 18);
+            this.removeLiab.TabIndex = 37;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Location = new System.Drawing.Point(78, 62);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(189, 24);
+            this.panel14.TabIndex = 38;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
@@ -445,40 +479,6 @@
             this.label14.Size = new System.Drawing.Size(210, 47);
             this.label14.TabIndex = 0;
             this.label14.Text = "Remove Liability";
-            // 
-            // specificLiab
-            // 
-            this.specificLiab.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.specificLiab.Font = new System.Drawing.Font("Poppins", 9F);
-            this.specificLiab.Location = new System.Drawing.Point(64, 57);
-            this.specificLiab.Name = "specificLiab";
-            this.specificLiab.Size = new System.Drawing.Size(204, 18);
-            this.specificLiab.TabIndex = 37;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(61, 54);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(207, 24);
-            this.panel13.TabIndex = 38;
-            // 
-            // removeLiab
-            // 
-            this.removeLiab.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.removeLiab.Font = new System.Drawing.Font("Poppins", 9F);
-            this.removeLiab.Location = new System.Drawing.Point(81, 65);
-            this.removeLiab.Name = "removeLiab";
-            this.removeLiab.Size = new System.Drawing.Size(186, 18);
-            this.removeLiab.TabIndex = 37;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Location = new System.Drawing.Point(78, 62);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(189, 24);
-            this.panel14.TabIndex = 38;
             // 
             // AdminLiabilities
             // 

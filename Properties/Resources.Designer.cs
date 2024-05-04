@@ -73,6 +73,26 @@ namespace Dormify.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap announcementpic__1_ {
+            get {
+                object obj = ResourceManager.GetObject("announcementpic (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap announcementpic__2_ {
+            get {
+                object obj = ResourceManager.GetObject("announcementpic (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap attendance1 {
             get {
                 object obj = ResourceManager.GetObject("attendance1", resourceCulture);
