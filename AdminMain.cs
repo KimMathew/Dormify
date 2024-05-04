@@ -75,7 +75,7 @@ namespace Dormify
             var mainForm = new LoginForm();
             mainForm.Show();
 
-            this.Hide();
+            this.Close();
         } 
     }
 }
