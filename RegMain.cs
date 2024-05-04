@@ -133,12 +133,14 @@ namespace Dormify
         {
             var frmMessages = new RegMessages();
             frmMessages.Show();
+            this.ActiveControl = null;
         }
 
         private void btnGuests_Click(object sender, EventArgs e)
         {
             var frmGuests = new RegGuests();
             frmGuests.Show();
+            this.ActiveControl = null;
         }
     }
 }

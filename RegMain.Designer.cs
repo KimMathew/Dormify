@@ -141,9 +141,10 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(96)))), ((int)(((byte)(197)))));
-            this.panel9.Location = new System.Drawing.Point(10, 43);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 50);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(363, 2);
+            this.panel9.Size = new System.Drawing.Size(387, 2);
             this.panel9.TabIndex = 20;
             // 
             // panel5
@@ -163,12 +164,12 @@
             this.showTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.showTextBox.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showTextBox.ForeColor = System.Drawing.Color.Black;
-            this.showTextBox.Location = new System.Drawing.Point(15, 3);
+            this.showTextBox.Location = new System.Drawing.Point(15, 8);
             this.showTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.showTextBox.Name = "showTextBox";
             this.showTextBox.ReadOnly = true;
             this.showTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.showTextBox.Size = new System.Drawing.Size(356, 186);
+            this.showTextBox.Size = new System.Drawing.Size(356, 182);
             this.showTextBox.TabIndex = 0;
             this.showTextBox.Text = "";
             // 
@@ -200,9 +201,10 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(96)))), ((int)(((byte)(197)))));
-            this.panel8.Location = new System.Drawing.Point(7, 43);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 50);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(357, 2);
+            this.panel8.Size = new System.Drawing.Size(321, 2);
             this.panel8.TabIndex = 19;
             // 
             // panel6
@@ -297,9 +299,10 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(96)))), ((int)(((byte)(197)))));
-            this.panel10.Location = new System.Drawing.Point(9, 43);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 50);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(478, 2);
+            this.panel10.Size = new System.Drawing.Size(498, 2);
             this.panel10.TabIndex = 21;
             // 
             // panel7
@@ -317,10 +320,10 @@
             this.regularLiab.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.regularLiab.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.regularLiab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.regularLiab.Location = new System.Drawing.Point(23, 3);
+            this.regularLiab.Location = new System.Drawing.Point(22, 8);
             this.regularLiab.Name = "regularLiab";
             this.regularLiab.RowHeadersWidth = 51;
-            this.regularLiab.Size = new System.Drawing.Size(457, 186);
+            this.regularLiab.Size = new System.Drawing.Size(457, 182);
             this.regularLiab.TabIndex = 0;
             // 
             // panel11
@@ -337,9 +340,10 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(96)))), ((int)(((byte)(197)))));
-            this.panel12.Location = new System.Drawing.Point(10, 43);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 50);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(317, 2);
+            this.panel12.Size = new System.Drawing.Size(340, 2);
             this.panel12.TabIndex = 20;
             // 
             // panel13
@@ -383,10 +387,11 @@
             this.btnGuests.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuests.FlatAppearance.BorderSize = 0;
             this.btnGuests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuests.ForeColor = System.Drawing.Color.Transparent;
             this.btnGuests.Image = global::Dormify.Properties.Resources.guest;
-            this.btnGuests.Location = new System.Drawing.Point(817, 14);
+            this.btnGuests.Location = new System.Drawing.Point(817, 15);
             this.btnGuests.Name = "btnGuests";
-            this.btnGuests.Size = new System.Drawing.Size(30, 33);
+            this.btnGuests.Size = new System.Drawing.Size(30, 30);
             this.btnGuests.TabIndex = 23;
             this.btnGuests.UseVisualStyleBackColor = true;
             this.btnGuests.Click += new System.EventHandler(this.btnGuests_Click);
@@ -396,6 +401,7 @@
             this.btnRegMessages.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegMessages.FlatAppearance.BorderSize = 0;
             this.btnRegMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegMessages.ForeColor = System.Drawing.Color.Transparent;
             this.btnRegMessages.Image = global::Dormify.Properties.Resources.mail;
             this.btnRegMessages.Location = new System.Drawing.Point(853, 15);
             this.btnRegMessages.Name = "btnRegMessages";
