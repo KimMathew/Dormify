@@ -22,7 +22,6 @@ namespace Dormify
         public RegMessages()
         {
             InitializeComponent();
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -32,31 +31,9 @@ namespace Dormify
 
         private void btnMessageSubmit_Click(object sender, EventArgs e)
         {
-            string message = messageTextBox.Text.Trim();
-            if (!string.IsNullOrWhiteSpace(message))
-            {
-                if (!messageList.Contains(message))
-                {
-                    var newForm = new AdminMessages();
-                    newForm.loggedUsername = loggedUsername;
-                    messageList.Add(message);
-                    SaveMessagesToFile();
-                    MessageBox.Show("Message sent!");
-                    messageList.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("You have already sent this message.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Messages can not be empty!");
-            }
 
-            messageTextBox.Clear();
-            LoadMessagesFromFile();
         }
+
         private void LoadMessagesFromFile()
         {
             if (File.Exists(csvFileName))
@@ -77,6 +54,18 @@ namespace Dormify
         {
             
             LoadMessagesFromFile();
+        }
+
+        //Font color will change if typing 
+        private void messageTextBox_Click(object sender, EventArgs e)
+        {
+            messageTextBox.Text = "";
+        }
+
+        //Display a text and clear a text box if clicked
+        private void messageTextBox_TextChanged(object sender, EventArgs e)
+        {
+            messageTextBox.ForeColor = Color.Black;
         }
     }
 }

@@ -38,11 +38,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Search = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.Search = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.allAttendance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.specificAttendance)).BeginInit();
@@ -58,7 +58,7 @@
             this.allAttendance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.allAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.allAttendance.Location = new System.Drawing.Point(12, 62);
-            this.allAttendance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.allAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.allAttendance.Name = "allAttendance";
             this.allAttendance.RowHeadersWidth = 51;
             this.allAttendance.RowTemplate.Height = 24;
@@ -72,7 +72,7 @@
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(10, 62);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
@@ -86,7 +86,7 @@
             this.specificAttendance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.specificAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.specificAttendance.Location = new System.Drawing.Point(13, 94);
-            this.specificAttendance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.specificAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.specificAttendance.Name = "specificAttendance";
             this.specificAttendance.RowHeadersWidth = 51;
             this.specificAttendance.RowTemplate.Height = 24;
@@ -176,6 +176,42 @@
             this.panel3.Size = new System.Drawing.Size(478, 171);
             this.panel3.TabIndex = 41;
             // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Poppins", 9F);
+            this.textBox1.ForeColor = System.Drawing.Color.Gray;
+            this.textBox1.Location = new System.Drawing.Point(80, 63);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(117, 18);
+            this.textBox1.TabIndex = 39;
+            this.textBox1.Text = "Enter Username";
+            this.textBox1.Click += new System.EventHandler(this.textBox_Click);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Location = new System.Drawing.Point(77, 60);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(123, 24);
+            this.panel13.TabIndex = 40;
+            // 
+            // Search
+            // 
+            this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(99)))), ((int)(((byte)(108)))));
+            this.Search.FlatAppearance.BorderSize = 0;
+            this.Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Search.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search.ForeColor = System.Drawing.Color.White;
+            this.Search.Location = new System.Drawing.Point(12, 58);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(59, 28);
+            this.Search.TabIndex = 38;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = false;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
@@ -198,42 +234,6 @@
             this.label2.Size = new System.Drawing.Size(314, 47);
             this.label2.TabIndex = 0;
             this.label2.Text = "View Specific Attendance";
-            // 
-            // Search
-            // 
-            this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(99)))), ((int)(((byte)(108)))));
-            this.Search.FlatAppearance.BorderSize = 0;
-            this.Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Search.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search.ForeColor = System.Drawing.Color.White;
-            this.Search.Location = new System.Drawing.Point(12, 58);
-            this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(59, 28);
-            this.Search.TabIndex = 38;
-            this.Search.Text = "Search";
-            this.Search.UseVisualStyleBackColor = false;
-            this.Search.Click += new System.EventHandler(this.Search_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Poppins", 9F);
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(80, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 18);
-            this.textBox1.TabIndex = 39;
-            this.textBox1.Text = "Enter Username";
-            this.textBox1.Click += new System.EventHandler(this.textBox_Click);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(77, 60);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(123, 24);
-            this.panel13.TabIndex = 40;
             // 
             // AdminAttendance
             // 
