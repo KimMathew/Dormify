@@ -40,43 +40,44 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.deleteTextBox = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnSubmitDelete = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // createTextBox
             // 
             this.createTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.createTextBox.Font = new System.Drawing.Font("Poppins", 10F);
-            this.createTextBox.Location = new System.Drawing.Point(16, 60);
-            this.createTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.createTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.createTextBox.Location = new System.Drawing.Point(12, 60);
+            this.createTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.createTextBox.Multiline = true;
             this.createTextBox.Name = "createTextBox";
-            this.createTextBox.Size = new System.Drawing.Size(296, 129);
+            this.createTextBox.Size = new System.Drawing.Size(339, 153);
             this.createTextBox.TabIndex = 3;
+            this.createTextBox.Text = "Enter Announcement";
+            this.createTextBox.Click += new System.EventHandler(this.createTextBox_Click);
+            this.createTextBox.TextChanged += new System.EventHandler(this.createTextBox_TextChanged);
             // 
             // showTextBox
             // 
             this.showTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
             this.showTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.showTextBox.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showTextBox.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showTextBox.ForeColor = System.Drawing.Color.White;
             this.showTextBox.Location = new System.Drawing.Point(16, 60);
-            this.showTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.showTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.showTextBox.Name = "showTextBox";
             this.showTextBox.ReadOnly = true;
             this.showTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.showTextBox.Size = new System.Drawing.Size(363, 176);
+            this.showTextBox.Size = new System.Drawing.Size(334, 208);
             this.showTextBox.TabIndex = 10;
             this.showTextBox.Text = "";
             // 
@@ -90,7 +91,7 @@
             this.panel5.Controls.Add(this.createTextBox);
             this.panel5.Location = new System.Drawing.Point(12, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(330, 249);
+            this.panel5.Size = new System.Drawing.Size(363, 280);
             this.panel5.TabIndex = 40;
             // 
             // btnSubmit
@@ -102,7 +103,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(123, 200);
+            this.btnSubmit.Location = new System.Drawing.Point(135, 225);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(95, 44);
             this.btnSubmit.TabIndex = 39;
@@ -116,7 +117,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 47);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(330, 2);
+            this.panel6.Size = new System.Drawing.Size(363, 2);
             this.panel6.TabIndex = 25;
             // 
             // button1
@@ -150,9 +151,9 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.showTextBox);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(359, 0);
+            this.panel1.Location = new System.Drawing.Point(390, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(394, 249);
+            this.panel1.Size = new System.Drawing.Size(363, 280);
             this.panel1.TabIndex = 41;
             // 
             // panel2
@@ -161,7 +162,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 47);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(394, 2);
+            this.panel2.Size = new System.Drawing.Size(363, 2);
             this.panel2.TabIndex = 25;
             // 
             // button3
@@ -191,44 +192,36 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
-            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.deleteTextBox);
             this.panel3.Controls.Add(this.panel14);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.btnSubmitDelete);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(77, 304);
+            this.panel3.Location = new System.Drawing.Point(230, 297);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(330, 121);
+            this.panel3.Size = new System.Drawing.Size(305, 102);
             this.panel3.TabIndex = 42;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(4, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 23);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Input Announcement Number";
             // 
             // deleteTextBox
             // 
             this.deleteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.deleteTextBox.Font = new System.Drawing.Font("Poppins", 10F);
-            this.deleteTextBox.Location = new System.Drawing.Point(81, 84);
+            this.deleteTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.deleteTextBox.Location = new System.Drawing.Point(85, 65);
             this.deleteTextBox.Name = "deleteTextBox";
-            this.deleteTextBox.Size = new System.Drawing.Size(186, 20);
+            this.deleteTextBox.Size = new System.Drawing.Size(207, 20);
             this.deleteTextBox.TabIndex = 37;
+            this.deleteTextBox.Text = "Enter Announcement Number";
+            this.deleteTextBox.Click += new System.EventHandler(this.deleteTextBox_Click);
+            this.deleteTextBox.TextChanged += new System.EventHandler(this.deleteTextBox_TextChanged);
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Location = new System.Drawing.Point(78, 82);
+            this.panel14.Location = new System.Drawing.Point(82, 63);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(189, 24);
+            this.panel14.Size = new System.Drawing.Size(210, 24);
             this.panel14.TabIndex = 38;
             // 
             // panel4
@@ -237,7 +230,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 47);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(330, 2);
+            this.panel4.Size = new System.Drawing.Size(305, 2);
             this.panel4.TabIndex = 25;
             // 
             // button2
@@ -257,7 +250,7 @@
             this.btnSubmitDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitDelete.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitDelete.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitDelete.Location = new System.Drawing.Point(7, 80);
+            this.btnSubmitDelete.Location = new System.Drawing.Point(11, 61);
             this.btnSubmitDelete.Name = "btnSubmitDelete";
             this.btnSubmitDelete.Size = new System.Drawing.Size(66, 28);
             this.btnSubmitDelete.TabIndex = 32;
@@ -279,16 +272,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Remove Announcement";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Dormify.Properties.Resources.announcementpic__2_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(434, 264);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(331, 215);
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
-            // 
             // AdminAnnouncement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,7 +281,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminAnnouncement";
             this.Text = "AdminAnnouncement";
@@ -309,7 +291,6 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,7 +314,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnSubmitDelete;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

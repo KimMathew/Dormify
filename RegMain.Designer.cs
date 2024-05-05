@@ -166,10 +166,10 @@
             // 
             this.showTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(254)))));
             this.showTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.showTextBox.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showTextBox.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Bold);
             this.showTextBox.ForeColor = System.Drawing.Color.Black;
             this.showTextBox.Location = new System.Drawing.Point(15, 8);
-            this.showTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.showTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.showTextBox.Name = "showTextBox";
             this.showTextBox.ReadOnly = true;
             this.showTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
@@ -368,12 +368,12 @@
             this.regAttendance.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.regAttendance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.regAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.regAttendance.Location = new System.Drawing.Point(8, 7);
-            this.regAttendance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.regAttendance.Location = new System.Drawing.Point(12, 11);
+            this.regAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.regAttendance.Name = "regAttendance";
             this.regAttendance.RowHeadersWidth = 51;
             this.regAttendance.RowTemplate.Height = 24;
-            this.regAttendance.Size = new System.Drawing.Size(322, 139);
+            this.regAttendance.Size = new System.Drawing.Size(316, 138);
             this.regAttendance.TabIndex = 0;
             // 
             // label5

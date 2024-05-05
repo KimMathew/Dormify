@@ -121,5 +121,25 @@ namespace Dormify
             }
             LoadAnnouncementsFromFile();
         }
+
+        private void deleteTextBox_Click(object sender, EventArgs e)
+        {
+            deleteTextBox.Text = "";
+        }
+
+        private void deleteTextBox_TextChanged(object sender, EventArgs e)
+        {
+            deleteTextBox.ForeColor = Color.Black;
+        }
+
+        private void createTextBox_Click(object sender, EventArgs e)
+        {
+            createTextBox.Text = "";
+        }
+
+        private void createTextBox_TextChanged(object sender, EventArgs e)
+        {
+            createTextBox.ForeColor = Color.Black;
+        }
     }
 }
