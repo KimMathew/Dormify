@@ -15,6 +15,8 @@ namespace Dormify
 {
     public partial class AdminAttendance : Form
     {
+
+
         public AdminAttendance()
         {
             InitializeComponent();
@@ -70,6 +72,54 @@ namespace Dormify
             {
                 MessageBox.Show("Attendance CSV file not found.");
             }
+        }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+            loadSpecificUser(textBox1.Text);
+        }
+
+        private void loadSpecificUser(string username)
+        {
+            string csvFileName = "attendance.csv";
+            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
+            if (File.Exists(csvFilePath))
+            {
+                using (var reader = new StreamReader(csvFilePath))
+                using (var csv = new CsvReader(reader, new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)))
+                {
+                    try
+                    {
+                        var specificName = csv.GetRecords<Attendance>().Where(a => a.Username == username).ToList();
+
+                        specificAttendance.Columns.Clear();
+
+                        specificAttendance.Columns.Add("RoomNumber", "Room Number");
+                        specificAttendance.Columns.Add("Name", "Username");
+                        specificAttendance.Columns.Add("Status", "Status");
+                        specificAttendance.Columns.Add("Time_and_Date", "Time");
+
+                        foreach (var attendanceRecord in specificName)
+                        {
+                            specificAttendance.Rows.Add(attendanceRecord.RoomNumber, attendanceRecord.Username, attendanceRecord.Status, attendanceRecord.Time_and_Date);
+                        }
+                        
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred while loading attendance data: {ex.Message}");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Attendance CSV file not found.");
+            }
+        }
+
+        private void textBox_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
         }
 
     }
