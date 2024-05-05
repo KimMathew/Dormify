@@ -177,6 +177,12 @@ namespace Dormify
 
         }
 
+        private void UpdateButtonState(Button button, bool enabled)
+        {
+            button.Enabled = enabled;
+            button.BackColor = enabled ? Color.FromArgb(101, 134, 247) : Color.FromArgb(166, 182, 250);
+        }
+
         private void TimeIn_Click(object sender, EventArgs e)
         {
             string csvFileName = "attendance.csv";
@@ -216,8 +222,8 @@ namespace Dormify
 
                 loadAttendanceChecker(roomNum.Text);
 
-                TimeOut.Enabled = true;
-                TimeIn.Enabled = false;
+                UpdateButtonState(TimeIn, false);
+                UpdateButtonState(TimeOut, true);
 
             }
             catch (Exception ex)
@@ -266,8 +272,8 @@ namespace Dormify
 
                 loadAttendanceChecker(roomNum.Text);
 
-                TimeOut.Enabled = false;
-                TimeIn.Enabled = true;
+                UpdateButtonState(TimeOut, false);
+                UpdateButtonState(TimeIn, true);
 
             }
             catch (Exception ex)
