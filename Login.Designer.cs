@@ -88,7 +88,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(187, 398);
+            this.panel4.Location = new System.Drawing.Point(186, 398);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(40, 1);
             this.panel4.TabIndex = 18;
@@ -96,7 +96,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(100, 398);
+            this.panel3.Location = new System.Drawing.Point(99, 398);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(40, 1);
             this.panel3.TabIndex = 17;
@@ -190,7 +190,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Poppins Medium", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(126, 382);
+            this.btnExit.Location = new System.Drawing.Point(125, 382);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(76, 30);
             this.btnExit.TabIndex = 13;
@@ -200,9 +200,10 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.Transparent;
+            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(99)))), ((int)(((byte)(108)))));
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
             this.btnSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(147)))), ((int)(((byte)(248)))));
             this.btnSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(96)))), ((int)(((byte)(197)))));
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
