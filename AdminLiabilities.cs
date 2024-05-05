@@ -242,5 +242,25 @@ namespace Dormify
 
 
         }
+
+        private void specificLiab_Click(object sender, EventArgs e)
+        {
+            specificLiab.Text = "";
+        }
+
+        private void specificLiab_TextChanged(object sender, EventArgs e)
+        {
+            specificLiab.ForeColor = Color.Black;
+        }
+
+        private void removeLiab_Click(object sender, EventArgs e)
+        {
+            removeLiab.Text = "";
+        }
+
+        private void removeLiab_TextChanged(object sender, EventArgs e)
+        {
+            removeLiab.ForeColor = Color.Black;
+        }
     }
 }
