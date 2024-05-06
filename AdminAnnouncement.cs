@@ -29,9 +29,18 @@ namespace Dormify
             {
                 if (!announcementList.Contains(announcement)) 
                 {
-                    announcementList.Add(announcement);
-                    SaveAnnouncementsToFile();
-                    MessageBox.Show("Announcement Successful!");
+                    DialogResult result = MessageBox.Show("Are you sure you want to add this announcement?", "Confirm Announcement", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        announcementList.Add(announcement);
+                        SaveAnnouncementsToFile();
+                        MessageBox.Show("Announcement Successful!","Announcement Confirmed", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+
+                    }
+
                 }
                 else
                 {
@@ -100,24 +109,35 @@ namespace Dormify
             if (int.TryParse(deleteTextBox.Text, out index))
             {
                 index = index - 1;
-                if (index >= 0 && index <= announcementList.Count)
+                if (index > 0 && index < announcementList.Count)
                 {
-                    announcementList.RemoveAt(index);
-                    MessageBox.Show("Announcement removed successfully.");
-                    SaveAnnouncementsToFile();                        
-                    deleteTextBox.Clear();
+                    DialogResult result = MessageBox.Show("Are you sure you want to remove this announcement?", "Confirm Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if(result == DialogResult.Yes)
+                    {
+                        announcementList.RemoveAt(index);
+                        SaveAnnouncementsToFile();
+                        
+                        MessageBox.Show("Announcement Removed!", "Removal Confirmed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        //nothing happens
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Invalid announcement number.");
-                    deleteTextBox.Clear();
+                    MessageBox.Show("Invalid announcement number.","Invalid Number",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    
                 }
             }
             else
             {
-                MessageBox.Show("Invalid announcement number.");
-                deleteTextBox.Clear();
+                MessageBox.Show("Invalid announcement number.", "Invalid Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
+            deleteTextBox.Clear();
             LoadAnnouncementsFromFile();
         }
 

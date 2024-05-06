@@ -53,7 +53,7 @@ namespace Dormify
                message = message,
                status = status,
             };
-            MessageBox.Show("Message Sent!");
+            MessageBox.Show("Message Sent!", "Message Sent!", MessageBoxButtons.OK,MessageBoxIcon.Information);
             WriteToCsv(messageInformation);
             messageTextBox.Clear();
             LoadMessagesFromFile();
