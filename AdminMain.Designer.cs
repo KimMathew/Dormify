@@ -35,6 +35,7 @@
             this.usernamelbl = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlFormLoader = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.btnMessages = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnAttendance = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
             this.panel2.Controls.Add(this.pnlNav);
+            this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.btnMessages);
             this.panel2.Controls.Add(this.btnLogOut);
             this.panel2.Controls.Add(this.btnAttendance);
@@ -121,6 +123,25 @@
             this.pnlFormLoader.Name = "pnlFormLoader";
             this.pnlFormLoader.Size = new System.Drawing.Size(765, 477);
             this.pnlFormLoader.TabIndex = 5;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = global::Dormify.Properties.Resources.add_account;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(0, 341);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnAdd.Size = new System.Drawing.Size(186, 46);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.Text = "  Add Account";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnMessages
             // 
@@ -266,5 +287,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel pnlFormLoader;
         private System.Windows.Forms.Button btnMessages;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

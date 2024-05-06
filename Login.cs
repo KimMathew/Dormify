@@ -102,7 +102,9 @@ namespace Dormify
                                 string loggedIn = txtUsername.Text;
                                 var newform = new RegMain();
                                 newform.loggedUsername = loggedIn;
-                                
+                                newform.loggedRoom = roomNumber;
+
+
                                 newform.Show();
                                 if (RegMain.instance != null)
                                 {
