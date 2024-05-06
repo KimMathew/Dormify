@@ -176,11 +176,23 @@ namespace Dormify
 
         private void WriteToCsv(Liability liability)
         {
-            // Path to your CSV file
+            // Path to your CSV files
             string csvFileName = "liabilities.csv";
             string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
 
+            string csvFileName2 = "historyLiab.csv";
+            string csvFilePath2 = Path.Combine(Directory.GetCurrentDirectory(), csvFileName2);
+
+            // Write to liabilities.csv
             using (StreamWriter writer = new StreamWriter(csvFilePath, true))
+            using (CsvWriter csvWriter = new CsvWriter(writer, new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)))
+            {
+                csvWriter.WriteRecord(liability);
+                writer.WriteLine(); // Add newline after writing the record
+            }
+
+            // Write to historyLiab.csv
+            using (StreamWriter writer = new StreamWriter(csvFilePath2, true))
             using (CsvWriter csvWriter = new CsvWriter(writer, new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)))
             {
                 csvWriter.WriteRecord(liability);
@@ -189,9 +201,10 @@ namespace Dormify
         }
 
 
-        
 
-        public  void viewSpecified_Click(object sender, EventArgs e)
+
+
+        public void viewSpecified_Click(object sender, EventArgs e)
         {
             string viewSpecific = specificLiab.Text;
             LoadLiabilitiesByAssigneeFromCsv(viewSpecific);
@@ -201,11 +214,13 @@ namespace Dormify
         {
             string idToRemove = removeLiab.Text;
             RemoveLiabilityByAssigneeName(idToRemove);
+            specificLiab.Text = "";
             LoadLiabilitiesFromCsv();
             if (!string.IsNullOrWhiteSpace(specificLiab.Text))
             {
                 LoadLiabilitiesByAssigneeFromCsv(specificLiab.Text);
             }
+            dataGridView2.Rows.Clear();
             ClearTextBoxes();
         }
 
