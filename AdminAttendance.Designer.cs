@@ -57,12 +57,12 @@
             this.allAttendance.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.allAttendance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.allAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.allAttendance.Location = new System.Drawing.Point(12, 62);
-            this.allAttendance.Margin = new System.Windows.Forms.Padding(2);
+            this.allAttendance.Location = new System.Drawing.Point(16, 76);
+            this.allAttendance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.allAttendance.Name = "allAttendance";
             this.allAttendance.RowHeadersWidth = 51;
             this.allAttendance.RowTemplate.Height = 24;
-            this.allAttendance.Size = new System.Drawing.Size(339, 205);
+            this.allAttendance.Size = new System.Drawing.Size(452, 252);
             this.allAttendance.TabIndex = 4;
             // 
             // dataGridView2
@@ -71,12 +71,12 @@
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(10, 62);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.Location = new System.Drawing.Point(13, 76);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(341, 205);
+            this.dataGridView2.Size = new System.Drawing.Size(455, 252);
             this.dataGridView2.TabIndex = 5;
             // 
             // specificAttendance
@@ -85,13 +85,13 @@
             this.specificAttendance.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.specificAttendance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.specificAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.specificAttendance.Location = new System.Drawing.Point(13, 94);
-            this.specificAttendance.Margin = new System.Windows.Forms.Padding(2);
+            this.specificAttendance.Location = new System.Drawing.Point(17, 116);
+            this.specificAttendance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.specificAttendance.Name = "specificAttendance";
             this.specificAttendance.RowHeadersWidth = 51;
             this.specificAttendance.RowTemplate.Height = 24;
             this.specificAttendance.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.specificAttendance.Size = new System.Drawing.Size(453, 67);
+            this.specificAttendance.Size = new System.Drawing.Size(604, 82);
             this.specificAttendance.TabIndex = 11;
             // 
             // panel11
@@ -100,18 +100,20 @@
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Controls.Add(this.label8);
             this.panel11.Controls.Add(this.allAttendance);
-            this.panel11.Location = new System.Drawing.Point(12, 0);
+            this.panel11.Location = new System.Drawing.Point(16, 0);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(363, 280);
+            this.panel11.Size = new System.Drawing.Size(484, 345);
             this.panel11.TabIndex = 39;
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 47);
+            this.panel12.Location = new System.Drawing.Point(0, 58);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(363, 2);
+            this.panel12.Size = new System.Drawing.Size(484, 2);
             this.panel12.TabIndex = 25;
             // 
             // label8
@@ -122,9 +124,10 @@
             this.label8.Font = new System.Drawing.Font("Poppins", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.label8.Size = new System.Drawing.Size(348, 47);
+            this.label8.Padding = new System.Windows.Forms.Padding(11, 10, 0, 0);
+            this.label8.Size = new System.Drawing.Size(427, 58);
             this.label8.TabIndex = 0;
             this.label8.Text = "Attendance of Regular Users";
             // 
@@ -134,18 +137,20 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Location = new System.Drawing.Point(390, 0);
+            this.panel1.Location = new System.Drawing.Point(520, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(363, 280);
+            this.panel1.Size = new System.Drawing.Size(484, 345);
             this.panel1.TabIndex = 40;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 47);
+            this.panel2.Location = new System.Drawing.Point(0, 58);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(363, 2);
+            this.panel2.Size = new System.Drawing.Size(484, 2);
             this.panel2.TabIndex = 25;
             // 
             // label1
@@ -156,9 +161,10 @@
             this.label1.Font = new System.Drawing.Font("Poppins", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.label1.Size = new System.Drawing.Size(271, 47);
+            this.label1.Padding = new System.Windows.Forms.Padding(11, 10, 0, 0);
+            this.label1.Size = new System.Drawing.Size(331, 58);
             this.label1.TabIndex = 0;
             this.label1.Text = "Attendance of Guests\r\n";
             // 
@@ -171,9 +177,10 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.specificAttendance);
-            this.panel3.Location = new System.Drawing.Point(143, 294);
+            this.panel3.Location = new System.Drawing.Point(191, 362);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(478, 171);
+            this.panel3.Size = new System.Drawing.Size(637, 210);
             this.panel3.TabIndex = 41;
             // 
             // textBox1
@@ -181,9 +188,10 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Poppins", 9F);
             this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(80, 63);
+            this.textBox1.Location = new System.Drawing.Point(107, 78);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 18);
+            this.textBox1.Size = new System.Drawing.Size(156, 23);
             this.textBox1.TabIndex = 39;
             this.textBox1.Text = "Enter Username";
             this.textBox1.Click += new System.EventHandler(this.textBox_Click);
@@ -192,9 +200,10 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(77, 60);
+            this.panel13.Location = new System.Drawing.Point(103, 74);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(123, 24);
+            this.panel13.Size = new System.Drawing.Size(164, 30);
             this.panel13.TabIndex = 40;
             // 
             // Search
@@ -204,9 +213,10 @@
             this.Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Search.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search.ForeColor = System.Drawing.Color.White;
-            this.Search.Location = new System.Drawing.Point(12, 58);
+            this.Search.Location = new System.Drawing.Point(16, 71);
+            this.Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(59, 28);
+            this.Search.Size = new System.Drawing.Size(79, 34);
             this.Search.TabIndex = 38;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = false;
@@ -216,9 +226,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 47);
+            this.panel4.Location = new System.Drawing.Point(0, 58);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(478, 2);
+            this.panel4.Size = new System.Drawing.Size(637, 2);
             this.panel4.TabIndex = 25;
             // 
             // label2
@@ -229,22 +240,24 @@
             this.label2.Font = new System.Drawing.Font("Poppins", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.label2.Size = new System.Drawing.Size(314, 47);
+            this.label2.Padding = new System.Windows.Forms.Padding(11, 10, 0, 0);
+            this.label2.Size = new System.Drawing.Size(385, 58);
             this.label2.TabIndex = 0;
             this.label2.Text = "View Specific Attendance";
             // 
             // AdminAttendance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(228)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(765, 477);
+            this.ClientSize = new System.Drawing.Size(1020, 587);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AdminAttendance";
             this.Text = "AdminAttendance";
             ((System.ComponentModel.ISupportInitialize)(this.allAttendance)).EndInit();
