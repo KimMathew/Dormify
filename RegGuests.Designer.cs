@@ -54,7 +54,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.guestTO = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel11.SuspendLayout();
@@ -358,20 +358,20 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.textBox1);
+            this.panel7.Controls.Add(this.guestTO);
             this.panel7.Location = new System.Drawing.Point(20, 36);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(236, 24);
             this.panel7.TabIndex = 54;
             // 
-            // textBox1
+            // guestTO
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Poppins", 10F);
-            this.textBox1.Location = new System.Drawing.Point(3, 1);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 20);
-            this.textBox1.TabIndex = 39;
+            this.guestTO.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.guestTO.Font = new System.Drawing.Font("Poppins", 10F);
+            this.guestTO.Location = new System.Drawing.Point(3, 1);
+            this.guestTO.Name = "guestTO";
+            this.guestTO.Size = new System.Drawing.Size(228, 20);
+            this.guestTO.TabIndex = 39;
             // 
             // button1
             // 
@@ -464,7 +464,7 @@
         private System.Windows.Forms.Button btnTimeIn;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox guestTO;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;

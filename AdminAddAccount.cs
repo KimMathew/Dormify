@@ -55,6 +55,7 @@ namespace Dormify
                 {
                     using (StreamWriter writer = new StreamWriter(csvFilePath, true)) // Append to existing file
                     {
+                        writer.WriteLine();
                         writer.WriteLine(userData); // Write data to a new line
                     }
                     MessageBox.Show("User credentials appended to CSV file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

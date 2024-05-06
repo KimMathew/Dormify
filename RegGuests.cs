@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using CsvHelper;
 
@@ -9,6 +11,7 @@ namespace Dormify
     {
         public string loggedUsername;
         public string loggedRoom;
+        public string guestLeave;
 
         public RegGuests(string username, string room)
         {
@@ -21,6 +24,7 @@ namespace Dormify
         {
             guestBy.Text = loggedUsername;
             guestRoomNum.Text = loggedRoom;
+            guestLeave = guestTO.Text;
         }
 
         private class Guest
@@ -33,6 +37,39 @@ namespace Dormify
             public string Reason { get; set; }
             public string TimeIn { get; set; }
             public string TimeOut { get; set; }
+        }
+
+        private void TimeOut(string guestLeave)
+        {
+            // Path to your CSV file
+            string csvFileName = "guest.csv";
+            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
+
+            // Check if the file exists
+            if (File.Exists(csvFilePath))
+            {
+                // Read all lines from the CSV file
+                List<string> lines = File.ReadAllLines(csvFilePath).ToList();
+
+                // Remove liabilities with the specified assignee name
+                int removedCount = lines.RemoveAll(line => line.Split(',')[0] == guestLeave); // Assuming assigneeName is in the second column (index 1)
+
+                if (removedCount > 0)
+                {
+                    // Rewrite the updated data back to the CSV file
+                    File.WriteAllLines(csvFilePath, lines);
+
+                    MessageBox.Show($"Removed {removedCount} liabilities having the unique id: {guestLeave}");
+                }
+                else
+                {
+                    MessageBox.Show($"No liabilities having the unique id: {guestLeave}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("CSV file not found.");
+            }
         }
 
         private void WriteToCsv(Guest guest)
@@ -71,6 +108,7 @@ namespace Dormify
             string reason = guestReason.Text;
             string timeIn = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             string timeOut = "";
+
 
             // Create a Liability object
             var guest = new Guest
