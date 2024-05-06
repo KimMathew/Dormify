@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Dormify.AdminLiabilities;
 
 namespace Dormify
 {
@@ -24,6 +26,13 @@ namespace Dormify
             InitializeComponent();
 
         }
+        public class MessageInformation
+        {
+            public string messageID { get; set; }  
+            public string username { get; set; }
+            public string message { get; set; }
+            public string status { get; set; }
+        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -32,28 +41,19 @@ namespace Dormify
 
         private void btnMessageSubmit_Click(object sender, EventArgs e)
         {
+            string messageID = Guid.NewGuid().ToString();
+            string username = loggedUsername;
             string message = messageTextBox.Text.Trim();
-            if (!string.IsNullOrWhiteSpace(message))
-            {
-                if (!messageList.Contains(message))
-                {
-                    var newForm = new AdminMessages();
-                    newForm.loggedUsername = loggedUsername;
-                    messageList.Add(message);
-                    SaveMessagesToFile();
-                    MessageBox.Show("Message sent!");
-                    messageList.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("You have already sent this message.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Messages can not be empty!");
-            }
-
+            string status = "Pending";
+            
+            MessageInformation messageInformation = new MessageInformation
+            { 
+               messageID = messageID,
+               username = username,
+               message = message,
+               status = status,
+            };
+            WriteToCsv(messageInformation);
             messageTextBox.Clear();
             LoadMessagesFromFile();
         }
@@ -78,5 +78,18 @@ namespace Dormify
             
             LoadMessagesFromFile();
         }
+        private void WriteToCsv(MessageInformation messageInformation)
+        {
+            string csvFileName = "message.csv";
+            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
+
+            using (StreamWriter writer = new StreamWriter(csvFilePath, true))
+            using (CsvWriter csvWriter = new CsvWriter(writer, new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)))
+            {
+                csvWriter.WriteRecord(messageInformation);
+                writer.WriteLine(); // Add newline after writing the record
+            }
+        }
+
     }
 }

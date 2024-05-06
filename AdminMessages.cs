@@ -35,7 +35,7 @@ namespace Dormify
 
                     for (int i = 0; i < lines.Length; i++)
                     {
-                        textFormat.AppendFormat("{0}. {1}\n\n", i + 1, lines[i]);
+                        textFormat.AppendFormat("{0}\n\n", lines[i]);
                         showMessages.Text = textFormat.ToString();
                     }
                 }
@@ -64,5 +64,6 @@ namespace Dormify
         {
             LoadMessagesFromFile();
         }
+
     }
 }

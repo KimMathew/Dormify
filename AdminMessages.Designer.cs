@@ -34,12 +34,11 @@
             // showMessages
             // 
             this.showMessages.AutoSize = true;
-            this.showMessages.Location = new System.Drawing.Point(416, 221);
+            this.showMessages.Location = new System.Drawing.Point(466, 9);
             this.showMessages.Name = "showMessages";
             this.showMessages.Size = new System.Drawing.Size(44, 16);
             this.showMessages.TabIndex = 0;
             this.showMessages.Text = "label1";
-            this.showMessages.Click += new System.EventHandler(this.showMessages_Click);
             // 
             // AdminMessages
             // 

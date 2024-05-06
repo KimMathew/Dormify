@@ -52,7 +52,6 @@ namespace Dormify
 
             if (File.Exists(csvFilePath))
             {
-
                 string[] lines = File.ReadAllLines(csvFilePath);
                 if (lines.Length > 0 && !string.IsNullOrWhiteSpace(lines[0]))
                 {
