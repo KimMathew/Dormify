@@ -44,12 +44,12 @@ namespace Dormify
                 }
                 else
                 {
-                    MessageBox.Show("The announcement already exists.");
+                    MessageBox.Show("The announcement already exists.","Announcement Already Exists",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Announcements can not be empty!");
+                MessageBox.Show("Announcements can not be empty!","Announcement Empty",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
             createTextBox.Clear(); 
@@ -128,13 +128,13 @@ namespace Dormify
                 }
                 else
                 {
-                    MessageBox.Show("Invalid announcement number.","Invalid Number",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid announcement number.","Invalid Number",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     
                 }
             }
             else
             {
-                MessageBox.Show("Invalid announcement number.", "Invalid Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid announcement number.", "Invalid Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
             deleteTextBox.Clear();
