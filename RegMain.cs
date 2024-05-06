@@ -98,50 +98,58 @@ namespace Dormify
 
         private void LoadLiabilitiesByAssigneeFromCsv(string assigneeName)
         {
-            // Path to your CSV file
-            string csvFileName = "liabilities.csv";
-            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
-
-            // Convert assigneeName and "general" to lowercase for case-insensitive comparison
-            string assigneeNameLower = assigneeName.ToLower();
-            string generalLower = "general".ToLower();
-
-            // Check if the file exists
-            if (File.Exists(csvFilePath))
+            try
             {
-                using (var reader = new StreamReader(csvFilePath))
-                using (var csv = new CsvReader(reader, new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)))
+                // Path to your CSV file
+                string csvFileName = "liabilities.csv";
+                string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
+
+                // Convert assigneeName and "general" to lowercase for case-insensitive comparison
+                string assigneeNameLower = assigneeName.ToLower();
+                string generalLower = "general".ToLower();
+
+                // Check if the file exists
+                if (File.Exists(csvFilePath))
                 {
-                    // Read the records from CSV file
-                    var records = csv.GetRecords<Liability>().Where(l => l.AssigneeName.ToLower() == assigneeNameLower || l.AssigneeName.ToLower() == generalLower).ToList();
-
-                    // Clear existing rows and columns from DataGridView
-                    regularLiab.Rows.Clear();
-                    regularLiab.Columns.Clear();
-
-                    // Define DataGridView columns
-                    regularLiab.Columns.Add("Name", "Liability Name");
-                    regularLiab.Columns.Add("Description", "Description");
-                    regularLiab.Columns.Add("Price", "Price");
-                    regularLiab.Columns.Add("DueDate", "Due Date");
-
-                    // Check if any records were found for the specified assignee
-                    if (records.Any())
+                    using (var reader = new StreamReader(csvFilePath))
+                    using (var csv = new CsvReader(reader, new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)))
                     {
-                        // Populate DataGridView with filtered liability data
-                        foreach (var liability in records)
+                        // Read the records from CSV file
+                        var records = csv.GetRecords<Liability>().Where(l => l.AssigneeName.ToLower() == assigneeNameLower || l.AssigneeName.ToLower() == generalLower).ToList();
+
+                        // Clear existing rows and columns from DataGridView
+                        regularLiab.Rows.Clear();
+                        regularLiab.Columns.Clear();
+
+                        // Define DataGridView columns
+                        regularLiab.Columns.Add("Name", "Liability Name");
+                        regularLiab.Columns.Add("Description", "Description");
+                        regularLiab.Columns.Add("Price", "Price");
+                        regularLiab.Columns.Add("DueDate", "Due Date");
+
+                        // Check if any records were found for the specified assignee
+                        if (records.Any())
                         {
-                            // Add a new row to DataGridView
-                            regularLiab.Rows.Add(liability.Name, liability.Description, liability.Price, liability.DueDate);
+                            // Populate DataGridView with filtered liability data
+                            foreach (var liability in records)
+                            {
+                                // Add a new row to DataGridView
+                                regularLiab.Rows.Add(liability.Name, liability.Description, liability.Price, liability.DueDate);
+                            }
                         }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("CSV file not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("CSV file not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"An error occurred while loading liabilities from CSV: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         private void LoadAnnouncementsFromFile()

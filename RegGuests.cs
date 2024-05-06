@@ -183,6 +183,7 @@ namespace Dormify
         {
             guestLeave = guestTO.Text;
             SetTimeOut(guestLeave);
+            guestTO.Text = "";
         }
     }
 }
