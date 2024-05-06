@@ -73,8 +73,8 @@
             this.messageTextBox.Size = new System.Drawing.Size(352, 205);
             this.messageTextBox.TabIndex = 26;
             this.messageTextBox.Text = "Enter your message here...";
-            this.messageTextBox.Click += new System.EventHandler(this.messageTextBox_Click);
-            this.messageTextBox.TextChanged += new System.EventHandler(this.messageTextBox_TextChanged);
+            //this.messageTextBox.Click += new System.EventHandler(this.messageTextBox_Click);
+           //this.messageTextBox.TextChanged += new System.EventHandler(this.messageTextBox_TextChanged);
             // 
             // btnMessageSubmit
             // 

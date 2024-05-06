@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Dormify.AdminLiabilities;
 
 namespace Dormify
 {
@@ -22,6 +24,14 @@ namespace Dormify
         public RegMessages()
         {
             InitializeComponent();
+
+        }
+        public class MessageInformation
+        {
+            public string messageID { get; set; }  
+            public string username { get; set; }
+            public string message { get; set; }
+            public string status { get; set; }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -31,9 +41,23 @@ namespace Dormify
 
         private void btnMessageSubmit_Click(object sender, EventArgs e)
         {
-
+            string messageID = Guid.NewGuid().ToString();
+            string username = loggedUsername;
+            string message = messageTextBox.Text.Trim();
+            string status = "Pending";
+            
+            MessageInformation messageInformation = new MessageInformation
+            { 
+               messageID = messageID,
+               username = username,
+               message = message,
+               status = status,
+            };
+            MessageBox.Show("Message Sent!");
+            WriteToCsv(messageInformation);
+            messageTextBox.Clear();
+            LoadMessagesFromFile();
         }
-
         private void LoadMessagesFromFile()
         {
             if (File.Exists(csvFileName))
@@ -55,17 +79,18 @@ namespace Dormify
             
             LoadMessagesFromFile();
         }
-
-        //Font color will change if typing 
-        private void messageTextBox_Click(object sender, EventArgs e)
+        private void WriteToCsv(MessageInformation messageInformation)
         {
-            messageTextBox.Text = "";
+            string csvFileName = "message.csv";
+            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
+
+            using (StreamWriter writer = new StreamWriter(csvFilePath, true))
+            using (CsvWriter csvWriter = new CsvWriter(writer, new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)))
+            {
+                csvWriter.WriteRecord(messageInformation);
+                writer.WriteLine(); // Add newline after writing the record
+            }
         }
 
-        //Display a text and clear a text box if clicked
-        private void messageTextBox_TextChanged(object sender, EventArgs e)
-        {
-            messageTextBox.ForeColor = Color.Black;
-        }
     }
 }
