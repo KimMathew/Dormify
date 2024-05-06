@@ -104,6 +104,7 @@ namespace Dormify
                                 newform.loggedUsername = loggedIn;
                                 newform.loggedRoom = roomNumber;
 
+
                                 newform.Show();
                                 if (RegMain.instance != null)
                                 {

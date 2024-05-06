@@ -31,6 +31,8 @@
             this.lblGuests = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.guestBy = new System.Windows.Forms.TextBox();
             this.btnTimeIn = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.guestReason = new System.Windows.Forms.TextBox();
@@ -49,8 +51,6 @@
             this.guestName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.guestBy = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -58,12 +58,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel11.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +98,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(254)))));
+            this.panel11.Controls.Add(this.panel4);
             this.panel11.Controls.Add(this.btnTimeIn);
             this.panel11.Controls.Add(this.panel5);
             this.panel11.Controls.Add(this.label6);
@@ -111,12 +112,30 @@
             this.panel11.Controls.Add(this.panel14);
             this.panel11.Controls.Add(this.label5);
             this.panel11.Controls.Add(this.label9);
-            this.panel11.Controls.Add(this.panel4);
             this.panel11.Controls.Add(this.label4);
             this.panel11.Location = new System.Drawing.Point(12, 61);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(552, 291);
             this.panel11.TabIndex = 27;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.guestBy);
+            this.panel4.Location = new System.Drawing.Point(296, 188);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(236, 24);
+            this.panel4.TabIndex = 53;
+            // 
+            // guestBy
+            // 
+            this.guestBy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.guestBy.Font = new System.Drawing.Font("Poppins", 10F);
+            this.guestBy.Location = new System.Drawing.Point(3, 1);
+            this.guestBy.Name = "guestBy";
+            this.guestBy.Size = new System.Drawing.Size(228, 20);
+            this.guestBy.TabIndex = 39;
             // 
             // btnTimeIn
             // 
@@ -132,6 +151,7 @@
             this.btnTimeIn.TabIndex = 28;
             this.btnTimeIn.Text = "Time In";
             this.btnTimeIn.UseVisualStyleBackColor = false;
+            this.btnTimeIn.Click += new System.EventHandler(this.timeIn_Click);
             // 
             // panel5
             // 
@@ -311,27 +331,6 @@
             this.label9.TabIndex = 40;
             this.label9.Text = "Name";
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.guestBy);
-            this.panel4.Location = new System.Drawing.Point(296, 188);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(236, 34);
-            this.panel4.TabIndex = 50;
-            // 
-            // guestBy
-            // 
-            this.guestBy.BackColor = System.Drawing.Color.White;
-            this.guestBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.guestBy.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guestBy.FormattingEnabled = true;
-            this.guestBy.Location = new System.Drawing.Point(3, 1);
-            this.guestBy.Name = "guestBy";
-            this.guestBy.Size = new System.Drawing.Size(232, 30);
-            this.guestBy.TabIndex = 49;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -415,8 +414,11 @@
             this.Name = "RegGuests";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegGuests";
+            this.Load += new System.EventHandler(this.RegGuests_Load);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -427,7 +429,6 @@
             this.panel1.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -457,8 +458,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox guestContactNum;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox guestBy;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox guestReason;
         private System.Windows.Forms.Label label6;
@@ -468,5 +467,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox guestBy;
     }
 }

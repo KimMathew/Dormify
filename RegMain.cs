@@ -22,6 +22,8 @@ namespace Dormify
         public Label userRoom;
         public static List<string> announcementList = new List<string>();
 
+        
+
 
         public RegMain()
         {
@@ -29,6 +31,7 @@ namespace Dormify
             instance = this;
             userLabel = usernamelbl;
             userRoom = roomNum;
+
         }
 
         public class Attendance
@@ -58,6 +61,25 @@ namespace Dormify
             }
         }
 
+        private void ShowFormWithBackground2(RegGuests form)
+        {
+            this.ActiveControl = null;
+            using (Form frmBackground = new Form())
+            {
+                frmBackground.StartPosition = FormStartPosition.Manual;
+                frmBackground.FormBorderStyle = FormBorderStyle.None;
+                frmBackground.Opacity = 0.5d;
+                frmBackground.BackColor = Color.Black;
+                frmBackground.Size = this.Size;
+                frmBackground.Location = this.Location;
+                frmBackground.ShowInTaskbar = false;
+                frmBackground.Show();
+                form.Owner = frmBackground;
+                form.ShowDialog();
+            }
+        }
+
+
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             var mainForm = new LoginForm();
@@ -66,11 +88,12 @@ namespace Dormify
             this.Close();
         }
 
-        private void RegMain_Load(object sender, EventArgs e)
+        public void RegMain_Load(object sender, EventArgs e)
         {
             LoadLiabilitiesByAssigneeFromCsv(loggedUsername);
             LoadAnnouncementsFromFile();
             loadAttendanceChecker(loggedRoom);
+
         }
 
         private void LoadLiabilitiesByAssigneeFromCsv(string assigneeName)
@@ -165,9 +188,9 @@ namespace Dormify
 
         private void btnGuests_Click(object sender, EventArgs e)
         {
-            ShowFormWithBackground(new RegGuests());
-        }
 
+            ShowFormWithBackground2(new RegGuests(loggedUsername, loggedRoom));
+        }
         private void usernamelbl_Click(object sender, EventArgs e)
         {
 
