@@ -55,7 +55,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.guestTO = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.timeOt = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel11.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -347,7 +347,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(254)))));
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.timeOt);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Location = new System.Drawing.Point(89, 366);
             this.panel6.Name = "panel6";
@@ -373,20 +373,21 @@
             this.guestTO.Size = new System.Drawing.Size(228, 20);
             this.guestTO.TabIndex = 39;
             // 
-            // button1
+            // timeOt
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(134)))), ((int)(((byte)(247)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Poppins Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(264, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 40);
-            this.button1.TabIndex = 53;
-            this.button1.Text = "Time Out";
-            this.button1.UseVisualStyleBackColor = false;
+            this.timeOt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(134)))), ((int)(((byte)(247)))));
+            this.timeOt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.timeOt.FlatAppearance.BorderSize = 0;
+            this.timeOt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timeOt.Font = new System.Drawing.Font("Poppins Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeOt.ForeColor = System.Drawing.Color.White;
+            this.timeOt.Location = new System.Drawing.Point(264, 28);
+            this.timeOt.Name = "timeOt";
+            this.timeOt.Size = new System.Drawing.Size(122, 40);
+            this.timeOt.TabIndex = 53;
+            this.timeOt.Text = "Time Out";
+            this.timeOt.UseVisualStyleBackColor = false;
+            this.timeOt.Click += new System.EventHandler(this.timeOt_Click);
             // 
             // label7
             // 
@@ -465,7 +466,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox guestTO;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button timeOt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox guestBy;

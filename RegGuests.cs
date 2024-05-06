@@ -20,11 +20,13 @@ namespace Dormify
             loggedRoom = room;
         }
 
+    
+
+
         private void RegGuests_Load(object sender, EventArgs e)
         {
             guestBy.Text = loggedUsername;
             guestRoomNum.Text = loggedRoom;
-            guestLeave = guestTO.Text;
         }
 
         private class Guest
@@ -39,38 +41,6 @@ namespace Dormify
             public string TimeOut { get; set; }
         }
 
-        private void TimeOut(string guestLeave)
-        {
-            // Path to your CSV file
-            string csvFileName = "guest.csv";
-            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
-
-            // Check if the file exists
-            if (File.Exists(csvFilePath))
-            {
-                // Read all lines from the CSV file
-                List<string> lines = File.ReadAllLines(csvFilePath).ToList();
-
-                // Remove liabilities with the specified assignee name
-                int removedCount = lines.RemoveAll(line => line.Split(',')[0] == guestLeave); // Assuming assigneeName is in the second column (index 1)
-
-                if (removedCount > 0)
-                {
-                    // Rewrite the updated data back to the CSV file
-                    File.WriteAllLines(csvFilePath, lines);
-
-                    MessageBox.Show($"Removed {removedCount} liabilities having the unique id: {guestLeave}");
-                }
-                else
-                {
-                    MessageBox.Show($"No liabilities having the unique id: {guestLeave}");
-                }
-            }
-            else
-            {
-                MessageBox.Show("CSV file not found.");
-            }
-        }
 
         private void WriteToCsv(Guest guest)
         {
@@ -87,6 +57,8 @@ namespace Dormify
             }
         }
 
+
+
         private void ClearTextBoxes()
         {
             guestName.Text = "";
@@ -96,6 +68,76 @@ namespace Dormify
             guestBy.Text = "";
             guestReason.Text = "";
         }
+
+        private void SetTimeOut(string guestName)
+        {
+            // Path to your CSV file
+            string csvFileName = "guest.csv";
+            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
+
+            try
+            {
+                // Read all lines from the CSV file
+                string[] allLines = File.ReadAllLines(csvFilePath);
+
+                // Create a list to hold modified lines
+                List<string> modifiedLines = new List<string>();
+
+                // Flag to check if the guest was found
+                bool guestFound = false;
+
+                // Iterate through each line
+                foreach (string line in allLines)
+                {
+                    // Split the line into fields
+                    string[] fields = line.Split(',');
+
+                    // Check if the guest name matches
+                    if (fields.Length > 0 && fields[0] == guestName)
+                    {
+                        guestFound = true;
+
+                        // Update the "Time Out" field (assuming it's the 8th field)
+                        if (fields.Length >= 8)
+                        {
+                            fields[7] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        }
+                        else
+                        {
+                            // If the line doesn't have enough fields, skip it and log a message
+                            MessageBox.Show($"Invalid format in CSV file for guest '{guestName}'. Unable to update time out.");
+                            continue;
+                        }
+                    }
+
+                    // Join the fields back into a line
+                    string modifiedLine = string.Join(",", fields);
+
+                    // Add the modified line to the list
+                    modifiedLines.Add(modifiedLine);
+                }
+
+                // Write the modified lines back to the CSV file
+                File.WriteAllLines(csvFilePath, modifiedLines);
+
+                if (guestFound)
+                {
+                    // Optionally, perform any additional tasks here after updating the time out
+                    MessageBox.Show($"Time out updated for guest '{guestName}' to {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}");
+                }
+                else
+                {
+                    MessageBox.Show($"Guest '{guestName}' not found in the CSV file.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while updating time out for guest '{guestName}': {ex.Message}");
+            }
+        }
+
+
+
 
         public void timeIn_Click(object sender, EventArgs e)
         {
@@ -134,6 +176,12 @@ namespace Dormify
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void timeOt_Click(object sender, EventArgs e)
+        {
+            guestLeave = guestTO.Text;
+            SetTimeOut(guestLeave);
         }
     }
 }
