@@ -260,7 +260,7 @@ namespace Dormify
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show($"An error has occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -310,7 +310,7 @@ namespace Dormify
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show($"An error has occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -352,20 +352,20 @@ namespace Dormify
                         }
                         else
                         {
-                            MessageBox.Show("No attendance records found for this room.");
+                            MessageBox.Show("No attendance records found for this room.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         // Refresh the DataGridView display
                         regAttendance.Refresh();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"An error occurred while loading attendance data: {ex.Message}");
+                        MessageBox.Show($"An error has occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Attendance CSV file not found.");
+                MessageBox.Show("Attendance CSV file not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }

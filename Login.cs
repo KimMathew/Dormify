@@ -123,12 +123,12 @@ namespace Dormify
                         }
                     }
                 }
-                MessageBox.Show("Incorrect username or password.");
+                MessageBox.Show("Incorrect username or password.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                MessageBox.Show($"An error has occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
