@@ -83,10 +83,18 @@ namespace Dormify
         {
             string csvFileName = "message.csv";
             string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
+            bool fileExists = File.Exists(csvFilePath);
 
             using (StreamWriter writer = new StreamWriter(csvFilePath, true))
             using (CsvWriter csvWriter = new CsvWriter(writer, new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)))
             {
+                if (!fileExists)
+                {
+                    csvWriter.WriteField("UNIQUE ID");
+                    csvWriter.WriteField("Username");
+                    csvWriter.WriteField("Message");
+                    csvWriter.NextRecord();
+                }
                 csvWriter.WriteRecord(messageInformation);
                 writer.WriteLine(); // Add newline after writing the record
             }
