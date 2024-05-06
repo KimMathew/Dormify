@@ -41,9 +41,10 @@
             this.lblMessages.Font = new System.Drawing.Font("Poppins", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessages.ForeColor = System.Drawing.Color.White;
             this.lblMessages.Location = new System.Drawing.Point(0, 0);
+            this.lblMessages.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessages.Name = "lblMessages";
-            this.lblMessages.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.lblMessages.Size = new System.Drawing.Size(170, 58);
+            this.lblMessages.Padding = new System.Windows.Forms.Padding(13, 12, 0, 0);
+            this.lblMessages.Size = new System.Drawing.Size(214, 72);
             this.lblMessages.TabIndex = 5;
             this.lblMessages.Text = "Messages";
             // 
@@ -53,9 +54,10 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = global::Dormify.Properties.Resources.exit;
-            this.btnExit.Location = new System.Drawing.Point(337, 12);
+            this.btnExit.Location = new System.Drawing.Point(449, 15);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(30, 33);
+            this.btnExit.Size = new System.Drawing.Size(40, 41);
             this.btnExit.TabIndex = 25;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -66,15 +68,13 @@
             this.messageTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.messageTextBox.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.messageTextBox.Location = new System.Drawing.Point(13, 61);
-            this.messageTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.messageTextBox.Location = new System.Drawing.Point(17, 75);
+            this.messageTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.messageTextBox.Multiline = true;
             this.messageTextBox.Name = "messageTextBox";
-            this.messageTextBox.Size = new System.Drawing.Size(352, 205);
+            this.messageTextBox.Size = new System.Drawing.Size(469, 252);
             this.messageTextBox.TabIndex = 26;
             this.messageTextBox.Text = "Enter your message here...";
-            //this.messageTextBox.Click += new System.EventHandler(this.messageTextBox_Click);
-            //this.messageTextBox.TextChanged += new System.EventHandler(this.messageTextBox_TextChanged);
             // 
             // btnMessageSubmit
             // 
@@ -84,9 +84,10 @@
             this.btnMessageSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMessageSubmit.Font = new System.Drawing.Font("Poppins Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMessageSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnMessageSubmit.Location = new System.Drawing.Point(127, 279);
+            this.btnMessageSubmit.Location = new System.Drawing.Point(169, 343);
+            this.btnMessageSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMessageSubmit.Name = "btnMessageSubmit";
-            this.btnMessageSubmit.Size = new System.Drawing.Size(122, 40);
+            this.btnMessageSubmit.Size = new System.Drawing.Size(163, 49);
             this.btnMessageSubmit.TabIndex = 29;
             this.btnMessageSubmit.Text = "Submit";
             this.btnMessageSubmit.UseVisualStyleBackColor = false;
@@ -94,15 +95,16 @@
             // 
             // RegMessages
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(134)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(379, 332);
+            this.ClientSize = new System.Drawing.Size(505, 409);
             this.Controls.Add(this.btnMessageSubmit);
             this.Controls.Add(this.messageTextBox);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblMessages);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RegMessages";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegMessages";

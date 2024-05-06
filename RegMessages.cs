@@ -90,10 +90,10 @@ namespace Dormify
             {
                 if (!fileExists)
                 {
-                    csvWriter.WriteField("UNIQUE ID");
-                    csvWriter.WriteField("Username");
-                    csvWriter.WriteField("Message");
-                    csvWriter.WriteField("Status");
+                    csvWriter.WriteField("uniqueID");
+                    csvWriter.WriteField("username");
+                    csvWriter.WriteField("message");
+                    csvWriter.WriteField("status");
                     csvWriter.NextRecord();
                 }
                 else 

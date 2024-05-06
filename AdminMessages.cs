@@ -1,18 +1,23 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Dormify.AdminLiabilities;
 
 namespace Dormify
 {
     public partial class AdminMessages : Form
     {
+        public static string csvFileName = "message.csv";
+        public static string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
         public string loggedUsername {get; set;}
         private static List<string> messageList = new List<string>();
         public AdminMessages()
@@ -20,40 +25,59 @@ namespace Dormify
             InitializeComponent();
         }
 
+        public class dormMessage
+        {
+            public string uniqueID {get; set;}
+            public string username {get; set;}
+            public string message {get; set;}
+            public string status {get; set;}
+
+        }
+
 
         private void LoadMessagesFromFile()
         {
-            string csvFileName = "message.csv";
-            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
-
-            if (File.Exists(csvFilePath))
+            try
             {
-                string[] lines = File.ReadAllLines(csvFilePath);
-                if (lines.Length > 0 && !string.IsNullOrWhiteSpace(lines[0]))
+                if (File.Exists(csvFilePath))
                 {
-                    StringBuilder textFormat = new StringBuilder();
 
-                    for (int i = 0; i < lines.Length; i++)
+                    using (var reader = new StreamReader(csvFilePath))
+                    using (var csv = new CsvReader(reader, new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)))
                     {
-                        textFormat.AppendFormat("{0}\n\n", lines[i]);
-                        showMessages.Text = textFormat.ToString();
+                        // Read the records from CSV file
+                        var records = csv.GetRecords<dormMessage>();
+
+                        // Clear existing rows and columns from DataGridView
+                        messageDGV.Rows.Clear();
+                        messageDGV.Columns.Clear();
+
+                        // Define DataGridView columns
+                        messageDGV.Columns.Add("UNIQUE ID", "Unique ID");
+                        messageDGV.Columns.Add("Username", "Username");
+                        messageDGV.Columns.Add("Message", "Message");
+                        messageDGV.Columns.Add("Status", "Status");
+
+                        // Populate DataGridView with message data
+                        foreach (var dormMessage in records)
+                        {
+                            // Add a new row to DataGridView
+                            messageDGV.Rows.Add(dormMessage.uniqueID, dormMessage.username, dormMessage.message, dormMessage.status);
+                        }
                     }
                 }
                 else
                 {
-                    showMessages.Text = "No messages at the moment.";
+                    MessageBox.Show("CSV file not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
+
             }
-            else
+            catch (Exception ex) 
             {
-                showMessages.Text = "No messages at the moment.";
+                MessageBox.Show($"An error occurred while loading liabilities from CSV: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (File.Exists(csvFileName))
-            {
-                messageList = File.ReadAllLines(csvFileName).ToList();
             }
-        }
 
         private void showMessages_Click(object sender, EventArgs e)
         {
@@ -62,7 +86,7 @@ namespace Dormify
 
         private void AdminMessages_Load(object sender, EventArgs e)
         {
-            LoadMessagesFromFile();
+           LoadMessagesFromFile();
         }
 
     }
