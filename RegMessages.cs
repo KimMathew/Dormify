@@ -90,13 +90,18 @@ namespace Dormify
             {
                 if (!fileExists)
                 {
-                    csvWriter.WriteField("UNIQUE ID");
-                    csvWriter.WriteField("Username");
-                    csvWriter.WriteField("Message");
+                    csvWriter.WriteField("uniqueID");
+                    csvWriter.WriteField("username");
+                    csvWriter.WriteField("message");
+                    csvWriter.WriteField("status");
                     csvWriter.NextRecord();
                 }
+                else 
+                {
+                    //nothing happens
+                }
                 csvWriter.WriteRecord(messageInformation);
-                writer.WriteLine(); // Add newline after writing the record
+                csvWriter.NextRecord();
             }
         }
 

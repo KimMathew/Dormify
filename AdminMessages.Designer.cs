@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.showMessages = new System.Windows.Forms.Label();
+            this.messageDGV = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.messageDGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // showMessages
+            // messageDGV
             // 
-            this.showMessages.AutoSize = true;
-            this.showMessages.Location = new System.Drawing.Point(466, 9);
-            this.showMessages.Name = "showMessages";
-            this.showMessages.Size = new System.Drawing.Size(44, 16);
-            this.showMessages.TabIndex = 0;
-            this.showMessages.Text = "label1";
+            this.messageDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.messageDGV.Location = new System.Drawing.Point(12, 28);
+            this.messageDGV.Name = "messageDGV";
+            this.messageDGV.RowHeadersWidth = 51;
+            this.messageDGV.RowTemplate.Height = 24;
+            this.messageDGV.Size = new System.Drawing.Size(996, 402);
+            this.messageDGV.TabIndex = 1;
             // 
             // AdminMessages
             // 
@@ -46,19 +48,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(228)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1020, 587);
-            this.Controls.Add(this.showMessages);
+            this.Controls.Add(this.messageDGV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminMessages";
             this.Text = "AdminMessages";
             this.Load += new System.EventHandler(this.AdminMessages_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.messageDGV)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label showMessages;
+        private System.Windows.Forms.DataGridView messageDGV;
     }
 }

@@ -22,6 +22,7 @@ namespace Dormify
         public string password;
         public string roomNumber;
         public string accountType;
+        public string defaultValue;
 
         public AdminAddAccount()
         {
@@ -33,11 +34,12 @@ namespace Dormify
             firstName = textBox1.Text;
             lastName = textBox2.Text;
             age = textBox3.Text;
-            userName = textBox4.Text;
+            userName = textBox6.Text;
             email = textBox5.Text;
-            password = textBox6.Text;
+            password = textBox4.Text;
             roomNumber = textBox7.Text;
             accountType = "regular";
+            defaultValue = "null";
 
             DialogResult result = MessageBox.Show($"First Name: {firstName}\nLast Name: {lastName}\nAge: {age}\nUsername: {userName}\nEmail: {email}\nPassword: {password}\nRoom Number: {roomNumber}",
                 "User Credentials",
@@ -47,6 +49,7 @@ namespace Dormify
             if (result == DialogResult.Yes)
             {
                 string userData = $"{firstName},{lastName},{age},{userName},{email},{password},{roomNumber},{accountType}";
+                string attendanceData = $"{userName},{defaultValue},{defaultValue},{roomNumber}";
 
                 // Write the user credentials to a CSV file
                 string csvFileName = "UserProfile.csv";
@@ -58,12 +61,28 @@ namespace Dormify
                         writer.WriteLine();
                         writer.WriteLine(userData); // Write data to a new line
                     }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                string csvFileName1 = "attendance.csv";
+                string csvFilePath1 = Path.Combine(Directory.GetCurrentDirectory(), csvFileName1);
+                try
+                {
+                    using (StreamWriter writer = new StreamWriter(csvFilePath1, true)) // Append to existing file
+                    {
+                        writer.WriteLine();
+                        writer.WriteLine(attendanceData); // Write data to a new line
+                    }
                     MessageBox.Show("User credentials appended to CSV file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
             }
             else
             {

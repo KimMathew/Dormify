@@ -64,13 +64,13 @@ namespace Dormify
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"An error occurred while loading attendance data: {ex.Message}");
+                        MessageBox.Show($"An error occurred while loading attendance data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Attendance CSV file not found.");
+                MessageBox.Show("Attendance CSV file not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -107,13 +107,13 @@ namespace Dormify
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"An error occurred while loading attendance data: {ex.Message}");
+                        MessageBox.Show($"An error occurred while loading attendance data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Attendance CSV file not found.");
+                MessageBox.Show("Attendance CSV file not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
