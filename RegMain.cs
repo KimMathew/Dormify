@@ -109,10 +109,6 @@ namespace Dormify
                             regularLiab.Rows.Add(liability.Name, liability.Description, liability.Price, liability.DueDate);
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("No liabilities found.");
-                    }
                 }
             }
             else
