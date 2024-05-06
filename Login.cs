@@ -55,7 +55,7 @@ namespace Dormify
             {
                 if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
-                MessageBox.Show("Username or Password is empty.");
+                MessageBox.Show("Username or Password is empty.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -65,7 +65,7 @@ namespace Dormify
 
                 if (!File.Exists(csvFilePath))
                 {
-                    MessageBox.Show("User credentials file does not exist.");
+                    MessageBox.Show("User credentials file does not exist.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
