@@ -102,6 +102,10 @@ namespace Dormify
             string csvFileName = "liabilities.csv";
             string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
 
+            // Convert assigneeName and "general" to lowercase for case-insensitive comparison
+            string assigneeNameLower = assigneeName.ToLower();
+            string generalLower = "general".ToLower();
+
             // Check if the file exists
             if (File.Exists(csvFilePath))
             {
@@ -109,7 +113,7 @@ namespace Dormify
                 using (var csv = new CsvReader(reader, new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)))
                 {
                     // Read the records from CSV file
-                    var records = csv.GetRecords<Liability>().Where(l => l.AssigneeName == assigneeName || l.AssigneeName == "general").ToList();
+                    var records = csv.GetRecords<Liability>().Where(l => l.AssigneeName.ToLower() == assigneeNameLower || l.AssigneeName.ToLower() == generalLower).ToList();
 
                     // Clear existing rows and columns from DataGridView
                     regularLiab.Rows.Clear();
@@ -135,9 +139,10 @@ namespace Dormify
             }
             else
             {
-                MessageBox.Show("CSV file not found.");
+                MessageBox.Show("CSV file not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
         private void LoadAnnouncementsFromFile()
         {

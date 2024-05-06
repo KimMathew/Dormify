@@ -92,8 +92,8 @@ namespace Dormify
                     // Split the line into fields
                     string[] fields = line.Split(',');
 
-                    // Check if the guest name matches
-                    if (fields.Length > 0 && fields[0] == guestName)
+                    // Check if the guest name matches (case-insensitive comparison)
+                    if (fields.Length > 0 && string.Equals(fields[0], guestName, StringComparison.OrdinalIgnoreCase))
                     {
                         guestFound = true;
 
@@ -105,7 +105,7 @@ namespace Dormify
                         else
                         {
                             // If the line doesn't have enough fields, skip it and log a message
-                            MessageBox.Show($"Invalid format in CSV file for guest '{guestName}'. Unable to update time out.");
+                            MessageBox.Show($"Invalid format in CSV file for guest '{guestName}'. Unable to update time out.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             continue;
                         }
                     }
@@ -123,18 +123,19 @@ namespace Dormify
                 if (guestFound)
                 {
                     // Optionally, perform any additional tasks here after updating the time out
-                    MessageBox.Show($"Time out updated for guest '{guestName}' to {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}");
+                    MessageBox.Show($"Time out updated for guest '{guestName}' to {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show($"Guest '{guestName}' not found in the CSV file.");
+                    MessageBox.Show($"Guest '{guestName}' not found in the CSV file.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while updating time out for guest '{guestName}': {ex.Message}");
+                MessageBox.Show($"An error occurred while updating time out for guest '{guestName}': {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
 
