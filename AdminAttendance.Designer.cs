@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.allAttendance = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.guestUser = new System.Windows.Forms.DataGridView();
             this.specificAttendance = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -44,7 +44,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.allAttendance)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guestUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.specificAttendance)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -65,19 +65,19 @@
             this.allAttendance.Size = new System.Drawing.Size(452, 252);
             this.allAttendance.TabIndex = 4;
             // 
-            // dataGridView2
+            // guestUser
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(13, 76);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(455, 252);
-            this.dataGridView2.TabIndex = 5;
+            this.guestUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
+            this.guestUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.guestUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.guestUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guestUser.Location = new System.Drawing.Point(13, 76);
+            this.guestUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guestUser.Name = "guestUser";
+            this.guestUser.RowHeadersWidth = 51;
+            this.guestUser.RowTemplate.Height = 24;
+            this.guestUser.Size = new System.Drawing.Size(455, 252);
+            this.guestUser.TabIndex = 5;
             // 
             // specificAttendance
             // 
@@ -101,7 +101,7 @@
             this.panel11.Controls.Add(this.label8);
             this.panel11.Controls.Add(this.allAttendance);
             this.panel11.Location = new System.Drawing.Point(16, 0);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(484, 345);
             this.panel11.TabIndex = 39;
@@ -111,7 +111,7 @@
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 58);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(484, 2);
             this.panel12.TabIndex = 25;
@@ -136,9 +136,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(121)))), ((int)(((byte)(247)))));
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dataGridView2);
+            this.panel1.Controls.Add(this.guestUser);
             this.panel1.Location = new System.Drawing.Point(520, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(484, 345);
             this.panel1.TabIndex = 40;
@@ -148,7 +148,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 58);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(484, 2);
             this.panel2.TabIndex = 25;
@@ -178,7 +178,7 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.specificAttendance);
             this.panel3.Location = new System.Drawing.Point(191, 362);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(637, 210);
             this.panel3.TabIndex = 41;
@@ -189,7 +189,7 @@
             this.textBox1.Font = new System.Drawing.Font("Poppins", 9F);
             this.textBox1.ForeColor = System.Drawing.Color.Gray;
             this.textBox1.Location = new System.Drawing.Point(107, 78);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(156, 23);
             this.textBox1.TabIndex = 39;
@@ -201,7 +201,7 @@
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
             this.panel13.Location = new System.Drawing.Point(103, 74);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(164, 30);
             this.panel13.TabIndex = 40;
@@ -214,7 +214,7 @@
             this.Search.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search.ForeColor = System.Drawing.Color.White;
             this.Search.Location = new System.Drawing.Point(16, 71);
-            this.Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Search.Margin = new System.Windows.Forms.Padding(4);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(79, 34);
             this.Search.TabIndex = 38;
@@ -227,7 +227,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 58);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(637, 2);
             this.panel4.TabIndex = 25;
@@ -257,11 +257,11 @@
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminAttendance";
             this.Text = "AdminAttendance";
             ((System.ComponentModel.ISupportInitialize)(this.allAttendance)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guestUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.specificAttendance)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
@@ -276,7 +276,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView allAttendance;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView guestUser;
         private System.Windows.Forms.DataGridView specificAttendance;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
