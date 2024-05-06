@@ -83,7 +83,6 @@ namespace Dormify
             string csvFileName = "liabilities.csv";
             string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
 
-
             // Check if the file exists
             if (File.Exists(csvFilePath))
             {
@@ -91,7 +90,7 @@ namespace Dormify
                 using (var csv = new CsvReader(reader, new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)))
                 {
                     // Read the records from CSV file
-                    var records = csv.GetRecords<Liability>().Where(l => l.AssigneeName == assigneeName).ToList();
+                    var records = csv.GetRecords<Liability>().Where(l => string.Equals(l.AssigneeName, assigneeName, StringComparison.OrdinalIgnoreCase)).ToList();
 
                     // Clear existing rows and columns from DataGridView
                     dataGridView2.Rows.Clear();
@@ -126,6 +125,7 @@ namespace Dormify
                 MessageBox.Show("CSV file not found.");
             }
         }
+
 
 
 

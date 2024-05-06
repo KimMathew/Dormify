@@ -92,8 +92,8 @@ namespace Dormify
                     // Split the line into fields
                     string[] fields = line.Split(',');
 
-                    // Check if the guest name matches
-                    if (fields.Length > 0 && fields[0] == guestName)
+                    // Check if the guest name matches (case-insensitive comparison)
+                    if (fields.Length > 0 && string.Equals(fields[0], guestName, StringComparison.OrdinalIgnoreCase))
                     {
                         guestFound = true;
 
@@ -135,6 +135,7 @@ namespace Dormify
                 MessageBox.Show($"An error occurred while updating time out for guest '{guestName}': {ex.Message}");
             }
         }
+
 
 
 
