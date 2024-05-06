@@ -93,10 +93,15 @@ namespace Dormify
                     csvWriter.WriteField("UNIQUE ID");
                     csvWriter.WriteField("Username");
                     csvWriter.WriteField("Message");
+                    csvWriter.WriteField("Status");
                     csvWriter.NextRecord();
                 }
+                else 
+                {
+                    //nothing happens
+                }
                 csvWriter.WriteRecord(messageInformation);
-                writer.WriteLine(); // Add newline after writing the record
+                csvWriter.NextRecord();
             }
         }
 
