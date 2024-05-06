@@ -73,7 +73,7 @@ namespace Dormify
             }
             else
             {
-                MessageBox.Show("CSV file not found.");
+                MessageBox.Show("CSV file not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -116,13 +116,13 @@ namespace Dormify
                     }
                     else
                     {
-                        MessageBox.Show("User not found.");
+                        MessageBox.Show("User not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("CSV file not found.");
+                MessageBox.Show("CSV file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -149,16 +149,16 @@ namespace Dormify
                     // Rewrite the updated data back to the CSV file
                     File.WriteAllLines(csvFilePath, lines);
 
-                    MessageBox.Show($"Removed {removedCount} liabilities having the unique id: {id}");
+                    MessageBox.Show($"Removed {removedCount} liabilities having the unique id: {id}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show($"No liabilities having the unique id: {id}");
+                    MessageBox.Show($"No liabilities having the unique id: {id}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("CSV file not found.");
+                MessageBox.Show("CSV file not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -249,7 +249,7 @@ namespace Dormify
             // Write liability to CSV file
             WriteToCsv(liability);
 
-            MessageBox.Show("Liability submitted successfully.");
+            MessageBox.Show("Liability submitted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             LoadLiabilitiesFromCsv();
 
