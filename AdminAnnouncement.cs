@@ -109,7 +109,7 @@ namespace Dormify
             if (int.TryParse(deleteTextBox.Text, out index))
             {
                 index = index - 1;
-                if (index > 0 && index < announcementList.Count)
+                if (index >= 0 && index < announcementList.Count)
                 {
                     DialogResult result = MessageBox.Show("Are you sure you want to remove this announcement?", "Confirm Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
