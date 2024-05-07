@@ -195,5 +195,15 @@ namespace Dormify
         {
             statusComboBox_SelectedIndexChanged(sender, e);
         }
+
+        private void searchMessageTextBox_TextChanged(object sender, EventArgs e)
+        {
+            searchMessageTextBox.ForeColor = Color.Black;
+        }
+
+        private void searchMessageTextBox_Click(object sender, EventArgs e)
+        {
+            searchMessageTextBox.Text = "";
+        }
     }
 }

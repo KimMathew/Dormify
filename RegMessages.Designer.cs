@@ -67,7 +67,7 @@
             this.messageTextBox.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageTextBox.ForeColor = System.Drawing.Color.Gray;
             this.messageTextBox.Location = new System.Drawing.Point(13, 61);
-            this.messageTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.messageTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.messageTextBox.Multiline = true;
             this.messageTextBox.Name = "messageTextBox";
             this.messageTextBox.Size = new System.Drawing.Size(352, 205);
