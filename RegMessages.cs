@@ -105,5 +105,14 @@ namespace Dormify
             }
         }
 
+        private void messageTextBox_TextChanged(object sender, EventArgs e)
+        {
+            messageTextBox.ForeColor = Color.Black;
+        }
+
+        private void messageTextBox_Click(object sender, EventArgs e)
+        {
+            messageTextBox.Text = "";
+        }
     }
 }
