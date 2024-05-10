@@ -12,7 +12,32 @@ using System.Windows.Forms;
 
 namespace Dormify
 {
-    public partial class AdminLiabilities : Form
+    public class BaseLiability
+    {
+        public string Id { get; set; }
+        public string AssigneeName { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Price { get; set; }
+        public string DueDate { get; set; }
+    }
+
+    public class Liability : BaseLiability
+    {
+        // Additional properties or methods specific to Liability for future functions can be added here
+    }
+
+    // Interface to define operations on liabilities
+    public interface ILiabilityRepository
+    {
+        void LoadLiabilities();
+        void LoadLiabilitiesByAssignee(string assigneeName);
+        void RemoveLiability(string id);
+        void WriteToCsv(BaseLiability liability);
+    }
+
+    // AdminLiabilities class implementing ILiabilityRepository
+    public partial class AdminLiabilities : Form, ILiabilityRepository
     {
         public AdminLiabilities()
         {
@@ -21,20 +46,10 @@ namespace Dormify
 
         private void AdminLiabilities_Load(object sender, EventArgs e)
         {
-            LoadLiabilitiesFromCsv();
+            LoadLiabilities();
         }
 
-        public class Liability
-        {
-            public string Id { get; set; }
-            public string AssigneeName { get; set; }
-            public string Name { get; set; }
-            public string Description { get; set; }
-            public string Price { get; set; }
-            public string DueDate { get; set; }
-        }
-
-        private void LoadLiabilitiesFromCsv()
+        public void LoadLiabilities()
         {
             try
             {
@@ -82,8 +97,7 @@ namespace Dormify
             }
         }
 
-
-        private void LoadLiabilitiesByAssigneeFromCsv(string assigneeName)
+        public void LoadLiabilitiesByAssignee(string assigneeName)
         {
             try
             {
@@ -139,11 +153,7 @@ namespace Dormify
             }
         }
 
-
-
-
-
-        private void RemoveLiabilityByAssigneeName(string id)
+        public void RemoveLiability(string id)
         {
             try
             {
@@ -183,20 +193,7 @@ namespace Dormify
             }
         }
 
-
-        private void ClearTextBoxes()
-        {
-            asignee.Text = "";
-            name.Text = "";
-            description.Text = "";
-            price.Text = "";
-            dueDate.Text = "";
-            removeLiab.Text = "";
-        }
-
-
-
-        private void WriteToCsv(Liability liability)
+        public void WriteToCsv(BaseLiability liability)
         {
             try
             {
@@ -229,31 +226,27 @@ namespace Dormify
             }
         }
 
+        // Other methods and event handlers...
 
-
-
-
-
-        public void viewSpecified_Click(object sender, EventArgs e)
+        private void viewSpecified_Click(object sender, EventArgs e)
         {
             string viewSpecific = specificLiab.Text;
-            LoadLiabilitiesByAssigneeFromCsv(viewSpecific);
+            LoadLiabilitiesByAssignee(viewSpecific);
         }
 
         private void remove_Click(object sender, EventArgs e)
         {
             string idToRemove = removeLiab.Text;
-            RemoveLiabilityByAssigneeName(idToRemove);
+            RemoveLiability(idToRemove);
             specificLiab.Text = "";
-            LoadLiabilitiesFromCsv();
+            LoadLiabilities();
             if (!string.IsNullOrWhiteSpace(specificLiab.Text))
             {
-                LoadLiabilitiesByAssigneeFromCsv(specificLiab.Text);
+                LoadLiabilitiesByAssignee(specificLiab.Text);
             }
             dataGridView2.Rows.Clear();
             ClearTextBoxes();
         }
-
 
         private void submit_Click(object sender, EventArgs e)
         {
@@ -281,11 +274,9 @@ namespace Dormify
 
             MessageBox.Show("Liability submitted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            LoadLiabilitiesFromCsv();
+            LoadLiabilities();
 
             ClearTextBoxes();
-
-
         }
 
         private void specificLiab_Click(object sender, EventArgs e)
@@ -306,6 +297,16 @@ namespace Dormify
         private void removeLiab_TextChanged(object sender, EventArgs e)
         {
             removeLiab.ForeColor = Color.Black;
+        }
+
+        private void ClearTextBoxes()
+        {
+            asignee.Text = "";
+            name.Text = "";
+            description.Text = "";
+            price.Text = "";
+            dueDate.Text = "";
+            removeLiab.Text = "";
         }
     }
 }
