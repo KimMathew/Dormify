@@ -11,9 +11,15 @@ using System.Windows.Forms;
 
 namespace Dormify
 {
-    public partial class AdminAddAccount : Form
+    // Interface for managing CSV file operations
+    public interface ICsvFileManager
     {
+        void AppendToCsv(string fileName, string data);
+    }
 
+    // Derived class for adding admin accounts
+    public partial class AdminAddAccount : Form, ICsvFileManager
+    {
         public string firstName;
         public string lastName;
         public string age;
@@ -29,8 +35,27 @@ namespace Dormify
             InitializeComponent();
         }
 
+        // Implementation of AppendToCsv method from the ICsvFileManager interface
+        public void AppendToCsv(string fileName, string data)
+        {
+            string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), fileName);
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(csvFilePath, true)) // Append to existing file
+                {
+                    writer.WriteLine();
+                    writer.WriteLine(data); // Write data to a new line
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void submit_Click(object sender, EventArgs e)
         {
+            // Collect user input
             firstName = textBox1.Text;
             lastName = textBox2.Text;
             age = textBox3.Text;
@@ -51,44 +76,15 @@ namespace Dormify
                 string userData = $"{firstName},{lastName},{age},{userName},{email},{password},{roomNumber},{accountType}";
                 string attendanceData = $"{userName},{defaultValue},{defaultValue},{roomNumber}";
 
-                // Write the user credentials to a CSV file
-                string csvFileName = "UserProfile.csv";
-                string csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), csvFileName);
-                try
-                {
-                    using (StreamWriter writer = new StreamWriter(csvFilePath, true)) // Append to existing file
-                    {
-                        writer.WriteLine();
-                        writer.WriteLine(userData); // Write data to a new line
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                string csvFileName1 = "attendance.csv";
-                string csvFilePath1 = Path.Combine(Directory.GetCurrentDirectory(), csvFileName1);
-                try
-                {
-                    using (StreamWriter writer = new StreamWriter(csvFilePath1, true)) // Append to existing file
-                    {
-                        writer.WriteLine();
-                        writer.WriteLine(attendanceData); // Write data to a new line
-                    }
-                    MessageBox.Show("User credentials appended to CSV file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
+                // Write user credentials to CSV files using the interface method
+                AppendToCsv("UserProfile.csv", userData);
+                AppendToCsv("attendance.csv", attendanceData);
+                MessageBox.Show("Data appended to CSV file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 return;
             }
-
         }
     }
 }
