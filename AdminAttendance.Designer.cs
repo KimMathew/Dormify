@@ -58,7 +58,7 @@
             this.allAttendance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.allAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.allAttendance.Location = new System.Drawing.Point(12, 62);
-            this.allAttendance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.allAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.allAttendance.Name = "allAttendance";
             this.allAttendance.RowHeadersWidth = 51;
             this.allAttendance.RowTemplate.Height = 24;
@@ -72,7 +72,7 @@
             this.guestUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.guestUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.guestUser.Location = new System.Drawing.Point(10, 62);
-            this.guestUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guestUser.Margin = new System.Windows.Forms.Padding(2);
             this.guestUser.Name = "guestUser";
             this.guestUser.RowHeadersWidth = 51;
             this.guestUser.RowTemplate.Height = 24;
@@ -86,7 +86,7 @@
             this.specificAttendance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.specificAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.specificAttendance.Location = new System.Drawing.Point(13, 94);
-            this.specificAttendance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.specificAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.specificAttendance.Name = "specificAttendance";
             this.specificAttendance.RowHeadersWidth = 51;
             this.specificAttendance.RowTemplate.Height = 24;

@@ -36,12 +36,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnSubmitStatus = new System.Windows.Forms.Button();
             this.searchMessageTextBox = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.btnSearchMessage = new System.Windows.Forms.Button();
-            this.btnSubmitStatus = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.messageDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchedDGV)).BeginInit();
             this.panel5.SuspendLayout();
@@ -55,7 +55,7 @@
             this.messageDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.messageDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.messageDGV.Location = new System.Drawing.Point(12, 62);
-            this.messageDGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.messageDGV.Margin = new System.Windows.Forms.Padding(2);
             this.messageDGV.Name = "messageDGV";
             this.messageDGV.RowHeadersWidth = 51;
             this.messageDGV.RowTemplate.Height = 24;
@@ -69,7 +69,7 @@
             this.searchedDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.searchedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.searchedDGV.Location = new System.Drawing.Point(10, 102);
-            this.searchedDGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchedDGV.Margin = new System.Windows.Forms.Padding(2);
             this.searchedDGV.Name = "searchedDGV";
             this.searchedDGV.RowHeadersWidth = 51;
             this.searchedDGV.RowTemplate.Height = 24;
@@ -84,7 +84,7 @@
             "Pending",
             "Finished"});
             this.statusComboBox.Location = new System.Drawing.Point(86, 235);
-            this.statusComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.statusComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Size = new System.Drawing.Size(119, 30);
             this.statusComboBox.TabIndex = 6;
@@ -150,28 +150,20 @@
             this.panel1.Size = new System.Drawing.Size(363, 280);
             this.panel1.TabIndex = 42;
             // 
-            // panel2
+            // btnSubmitStatus
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 47);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(363, 2);
-            this.panel2.TabIndex = 25;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Poppins", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.label1.Size = new System.Drawing.Size(232, 47);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Resolve Messages";
+            this.btnSubmitStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(99)))), ((int)(((byte)(108)))));
+            this.btnSubmitStatus.FlatAppearance.BorderSize = 0;
+            this.btnSubmitStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmitStatus.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmitStatus.ForeColor = System.Drawing.Color.White;
+            this.btnSubmitStatus.Location = new System.Drawing.Point(12, 236);
+            this.btnSubmitStatus.Name = "btnSubmitStatus";
+            this.btnSubmitStatus.Size = new System.Drawing.Size(66, 28);
+            this.btnSubmitStatus.TabIndex = 42;
+            this.btnSubmitStatus.Text = "Submit";
+            this.btnSubmitStatus.UseVisualStyleBackColor = false;
+            this.btnSubmitStatus.Click += new System.EventHandler(this.btnSubmitStatus_Click);
             // 
             // searchMessageTextBox
             // 
@@ -209,20 +201,28 @@
             this.btnSearchMessage.UseVisualStyleBackColor = false;
             this.btnSearchMessage.Click += new System.EventHandler(this.btnSearchMessage_Click);
             // 
-            // btnSubmitStatus
+            // panel2
             // 
-            this.btnSubmitStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(99)))), ((int)(((byte)(108)))));
-            this.btnSubmitStatus.FlatAppearance.BorderSize = 0;
-            this.btnSubmitStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmitStatus.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmitStatus.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitStatus.Location = new System.Drawing.Point(12, 236);
-            this.btnSubmitStatus.Name = "btnSubmitStatus";
-            this.btnSubmitStatus.Size = new System.Drawing.Size(66, 28);
-            this.btnSubmitStatus.TabIndex = 42;
-            this.btnSubmitStatus.Text = "Submit";
-            this.btnSubmitStatus.UseVisualStyleBackColor = false;
-            this.btnSubmitStatus.Click += new System.EventHandler(this.btnSubmitStatus_Click);
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 47);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(363, 2);
+            this.panel2.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Poppins", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.label1.Size = new System.Drawing.Size(232, 47);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Resolve Messages";
             // 
             // AdminMessages
             // 
