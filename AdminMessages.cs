@@ -66,10 +66,6 @@ namespace Dormify
                         }
                     }
                 }
-                else
-                {
-                    MessageBox.Show("CSV file not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
 
 
             }
