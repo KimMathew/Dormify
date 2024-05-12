@@ -386,9 +386,9 @@
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.label5.Size = new System.Drawing.Size(173, 50);
+            this.label5.Size = new System.Drawing.Size(222, 50);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Attendance";
+            this.label5.Text = "Who\'s at Home?";
             // 
             // btnLogOut
             // 
