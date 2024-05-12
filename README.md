@@ -1,4 +1,8 @@
-# Dormify
+<p align="center">
+    <img src="https://github.com/KimMathew/Dormify/blob/master/Assets/logo.png" width=300 height=300/>
+</p>
+
+# <p align="center"> Dormify </p>
 
 <p align = "justify"> 
     Dormify system is a revolutionary step forward in dorm management. Based on security and efficiency principles, Dormify creates smooth communication channels and expedites administrative procedures, giving owners and tenants a previously unobtainable degree of clarity   and control. Dormify's use of strong attendance tracking techniques and centralization of information transmission not only improves organizational coherence but also reinforces safety protocols, guaranteeing quick replies to inquiries and emergencies.
